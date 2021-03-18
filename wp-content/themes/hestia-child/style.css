@@ -1,0 +1,13 @@
+/*  
+Theme Name: Cartão Amigo    
+Theme URI: https://www.themeisle.com/     
+Description: This is a custom child theme I have created.    
+Author: ThemeIsle    
+URI: https://www.themeisle.com/    
+Template: hestia  
+Version: 0.1     
+*/
+
+.header-filter::before {
+    background-color: transparent;
+}

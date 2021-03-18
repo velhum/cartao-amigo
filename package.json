@@ -1,0 +1,22 @@
+{
+  "name": "cartao-amigo",
+  "version": "1.0.0",
+  "description": "Tema Wordpress para o site do Cartão Amigo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velhum/cartao-amigo.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "author": "Paulo Ellery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/velhum/cartao-amigo/issues"
+  },
+  "homepage": "https://github.com/velhum/cartao-amigo#readme"
+}
