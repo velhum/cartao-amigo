@@ -11,3 +11,9 @@ Version: 0.1
 .header-filter::before {
     background-color: transparent;
 }
+
+.navbar-transparent ul.nav.navbar-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+}

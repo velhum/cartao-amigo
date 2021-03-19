@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/velhum/cartao-amigo/issues"
   },
-  "homepage": "https://github.com/velhum/cartao-amigo#readme"
+  "homepage": "https://github.com/velhum/cartao-amigo#readme",
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
 }
