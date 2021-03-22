@@ -17,3 +17,7 @@ Version: 0.1
     border-radius: 50px;
     overflow: hidden;
 }
+
+body:not(.home) .header-filter {
+    background-position: center -73px;
+}

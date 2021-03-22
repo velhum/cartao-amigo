@@ -49,3 +49,17 @@ function my_custom_scripts() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+
+/**
+ * Insere um botão para demais redes crenciadas
+ * logo abaixo dos 'testimonials'
+ *
+ * @since 1.0.0
+ */
+function bt_rede_credenciada(){
+	echo '<div class="buttons text-center">';
+	echo '<a href="/cartao-amigo/rede-credenciada" title="Conheça os demais credenciados" class="btn btn-primary">Conheça os demais credenciados</a>';
+	echo '</div>';
+}
+add_action( 'hestia_bottom_testimonials_section_content_hook', 'bt_rede_credenciada' );
+
