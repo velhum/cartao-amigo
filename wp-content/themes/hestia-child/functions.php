@@ -33,20 +33,33 @@ add_action( 'after_switch_theme', 'hestia_child_get_parent_options' );
  * @since 1.0.0
  */
 function my_custom_scripts() {
+
     wp_enqueue_script(
 		'aos-js',
 		get_stylesheet_directory_uri() . '/assets/js/aos.js',
-		array( 'jquery' ),
-		'',
-		true
+		array( 'jquery' ), // Dependências
+		true, // incluir número da versão
+		true  // Carregar al final (antes de </body>)
 	);
+
     wp_enqueue_script(
 		'scripts-js',
 		get_stylesheet_directory_uri() . '/scripts.js',
-		array( 'jquery' ),
-		'',
-		true
+		array( 'jquery' ), // Dependências
+		true, // incluir número da versão
+		true  // Carregar al final (antes de </body>)
 	);
+
+	$idRedeCredenciada = 2; // ID da página Rede Credenciada
+	if( $idRedeCredenciada == get_the_ID()){
+		wp_enqueue_script(
+			'rede-credenciada',
+			get_stylesheet_directory_uri() . '/assets/js/rede-credenciada.js',
+			array( 'jquery' ), // Dependências
+			true, // incluir número da versão
+			true  // Carregar al final (antes de </body>)
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 

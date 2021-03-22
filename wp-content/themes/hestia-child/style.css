@@ -21,3 +21,18 @@ Version: 0.1
 body:not(.home) .header-filter {
     background-position: center -73px;
 }
+
+section {
+    margin: 160px 0;
+}
+
+section.hestia-features  {
+    margin: 0;
+}
+
+section.hestia-about {
+    background-image: url(./assets/images/acreditamos.jpg);
+    height: 400px;
+    background-position: center center;
+    background-size: contain;
+}
