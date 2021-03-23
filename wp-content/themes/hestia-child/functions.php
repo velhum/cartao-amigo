@@ -76,3 +76,17 @@ function bt_rede_credenciada(){
 }
 add_action( 'hestia_bottom_testimonials_section_content_hook', 'bt_rede_credenciada' );
 
+
+/**
+ * Insere um botão para a página de posts
+ * logo abaixo da sessão Blog da página inicial
+ *
+ * @since 1.0.0
+ */
+function bt_blog(){
+	echo '<div class="buttons text-center">';
+	echo '<a href="/blog" title="Mais notícias" class="btn btn-primary">Mais notícias...</a>';
+	echo '</div>';
+}
+add_action( 'hestia_bottom_blog_section_content_hook', 'bt_blog' );
+

@@ -8,6 +8,11 @@ Template: hestia
 Version: 0.1     
 */
 
+.main {
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
 .header-filter::before {
     background-color: transparent;
 }
@@ -16,6 +21,10 @@ Version: 0.1
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     overflow: hidden;
+}
+
+.header-filter {
+    /* background-image: url(./assets/images/hand-holding-card.jpg); */
 }
 
 body:not(.home) .header-filter {
@@ -30,9 +39,39 @@ section.hestia-features  {
     margin: 0;
 }
 
+section.hestia-contact  {
+    margin-bottom: 0;
+}
+
 section.hestia-about {
-    background-image: url(./assets/images/acreditamos.jpg);
+    /* background-image: url(./assets/images/acreditamos.jpg); */
     height: 400px;
     background-position: center center;
     background-size: contain;
+}
+
+section.hestia-about.section-image:after {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+
+    section.hestia-about {
+        height: 200px;
+    }
+    
+    section {
+        margin: 0;
+    }
+    
+    .navbar-transparent ul.nav.navbar-nav {
+        background-color: transparent;
+        border-radius: 0px;
+        overflow: auto;
+    }
+    
+    .header-filter {
+        background-position-x: 630px;
+    }
+    
 }
