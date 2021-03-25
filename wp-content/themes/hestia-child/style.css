@@ -70,10 +70,12 @@ h1.hestia-title,
 h2.hestia-title,
 h4.card-title,
 h4.card-title a,
+div#main-navigation,
 .buttons a.btn {
     font-family: 'Baloo Thambi 2', 'Roboto';
 }
 
+div#main-navigation ul.nav.navbar-nav li a,
 button,
 input[type="submit"],
 input[type="button"],
