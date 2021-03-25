@@ -8,6 +8,15 @@ Template: hestia
 Version: 0.1     
 */
 
+@font-face {
+    font-family: 'Baloo Thambi 2';
+    src: url('./assets/fonts/baloothambi2-semibold.ttf') format('truetype'),
+         url('./assets/fonts/baloothambi2-semibold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/baloothambi2-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main {
     max-width: 1770px;
     margin: 0 auto;
@@ -53,6 +62,32 @@ section.hestia-about {
 section.hestia-about.section-image:after {
     background-color: transparent;
 }
+
+/* == TIPOGRAFIA == */
+
+.carousel h1.hestia-title,
+h1.hestia-title,
+h2.hestia-title,
+h4.card-title,
+h4.card-title a,
+.buttons a.btn {
+    font-family: 'Baloo Thambi 2', 'Roboto';
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.btn {
+  font-size: 16px;
+}
+
+.carousel h1.hestia-title span {
+    background: linear-gradient(to right, #ff6600, #ffd900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 
 @media (max-width: 768px) {
 

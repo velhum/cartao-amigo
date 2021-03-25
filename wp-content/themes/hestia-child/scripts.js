@@ -16,6 +16,9 @@
     /* Blog */
     $('article.card.card-blog').attr('data-aos', 'fade-up');
 
+    /* Aplica degrade no 'amigo' do título da home */
+    $('.carousel h1.hestia-title').html('cartão<span class="amigo-degrade">amigo</span>');
+
 })(jQuery)
 
 AOS.init({
