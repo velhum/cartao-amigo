@@ -41,7 +41,7 @@ body:not(.home) .header-filter {
 }
 
 section {
-    margin: 160px 0;
+    /* margin: 160px 0; */
 }
 
 section.hestia-features  {
@@ -89,7 +89,141 @@ input[type="button"],
     -webkit-text-fill-color: transparent;
 }
 
+section.hestia-simulator {
+    text-align: center;
+    padding: 75px 0;
+}
 
+/* == Flex layout == */
+
+.fx-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* == SIMULATOR == */
+
+.hestia-simulator .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 32px;
+}
+
+.hestia-simulator .input-group .form-control {
+    flex-grow: 1;
+    font-size: 32px;
+    text-align: center;
+}
+
+.hestia-simulator .procedimentos ul.dropdown-menu,
+.hestia-simulator .procedimentos button {
+    width: 100%;
+}
+
+.hestia-simulator div.procedimentos {
+    flex-grow: 1;
+}
+
+.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento .quantidade {
+    border: none;
+    flex-grow: 0;
+    width: 48px;
+    text-align: right;
+}
+
+.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento .descricao {
+    flex-grow: 1;
+}
+
+.hestia-simulator .resultado {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.hestia-simulator h2.hestia-title {
+    margin-top: 0;
+}
+
+.hestia-simulator h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.hestia-simulator-content .hestia-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == LOCATION == */
+
+section.hestia-location {
+    height: 600px;
+    position: relative;
+    background-image: url('./assets/images/mapa-df.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0)}
+    40%  {transform: translate3d(0,10%,0)}
+    100% {transform: translate3d(0,30%,0)}
+}
+
+section.hestia-location .pin {
+    background-position: center center;
+    background-size: cover;
+    background-image: url('./assets/images/pin.png');
+    width: 38px;
+    height: 50px;
+    animation: jump .5s linear alternate infinite;
+    position: absolute;
+}
+
+section.hestia-location .container {
+    height: 100%;
+    overflow: hidden;
+}
+
+section.hestia-location h2 {
+    background-color: #fd6925;
+    color: #FFF;
+    padding: 16px 32px;
+    border-radius: 32px;
+    box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%), 0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
+    text-align: center;
+    line-height: 34px;
+    z-index: 2;
+}
+
+.hestia-location-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jump {
+    transform-origin: 50% 50%;
+    animation: jump .5s ease alternate infinite;
+}
 
 @media (max-width: 768px) {
 

@@ -35,11 +35,19 @@ add_action( 'after_switch_theme', 'hestia_child_get_parent_options' );
 function my_custom_scripts() {
 
     wp_enqueue_script(
+		'jquery-mask',
+		get_stylesheet_directory_uri() . '/assets/js/jquery.mask.js',
+		array( 'jquery' ), // Dependências
+		true, // incluir número da versão
+		true  // Carregar ao final (antes de </body>)
+	);
+
+    wp_enqueue_script(
 		'aos-js',
 		get_stylesheet_directory_uri() . '/assets/js/aos.js',
 		array( 'jquery' ), // Dependências
 		true, // incluir número da versão
-		true  // Carregar al final (antes de </body>)
+		true  // Carregar ao final (antes de </body>)
 	);
 
     wp_enqueue_script(
@@ -47,17 +55,28 @@ function my_custom_scripts() {
 		get_stylesheet_directory_uri() . '/scripts.js',
 		array( 'jquery' ), // Dependências
 		true, // incluir número da versão
-		true  // Carregar al final (antes de </body>)
+		true  // Carregar ao final (antes de </body>)
 	);
+
+	if( is_front_page() ){
+		wp_enqueue_script(
+			'simulator-js',
+			get_stylesheet_directory_uri() . '/assets/js/simulator.js',
+			array( 'jquery' ), // Dependências
+			true, // incluir número da versão
+			true  // Carregar ao final (antes de </body>)
+		);
+	}
 
 	$idRedeCredenciada = 2; // ID da página Rede Credenciada
 	if( $idRedeCredenciada == get_the_ID()){
+	// if( is_page_template(get_stylesheet_directory_uri() . '/page-rede-credenciada.php') ){
 		wp_enqueue_script(
 			'rede-credenciada',
 			get_stylesheet_directory_uri() . '/assets/js/rede-credenciada.js',
 			array( 'jquery' ), // Dependências
 			true, // incluir número da versão
-			true  // Carregar al final (antes de </body>)
+			true  // Carregar ao final (antes de </body>)
 		);
 	}
 }
