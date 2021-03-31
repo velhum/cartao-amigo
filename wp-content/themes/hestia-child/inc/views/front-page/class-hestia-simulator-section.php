@@ -60,6 +60,12 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                             data-mask="#.##0,00"
                                             data-mask-reverse="true">
                                     </div>
+                                    <div class="icon varios" style="color:#4caf50">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
                                     <h4 class="info-title">Valor que você pagou por ano</h4>
                                     <div class="input-group fx-row">
                                         <span class="input-group-addon">R$</span>
@@ -125,6 +131,12 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                             type="text"
                                             class="form-control dinheiro fx-grow"
                                             disabled>
+                                    </div>
+                                    <div class="icon varios" style="color:#fd6925">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
                                     </div>
                                     <h4 class="info-title">Dinheiro que você deixou de economizar</h4>
                                     <div class="input-group fx-row">
