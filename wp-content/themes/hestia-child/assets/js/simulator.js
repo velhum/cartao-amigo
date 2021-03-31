@@ -2,8 +2,8 @@
 
     console.log('Simulador!'); 
 
-    $('.dinheiro').val('0,00').mask("#.##0,00", {reverse: true});
-    $('#mensalidade').focus( elm => {
+    $('.dinheiro').val('0,00');
+    $('#mensalidade').on('focus', () => {
         $('#mensalidade').val('');
     });
 
@@ -29,10 +29,23 @@
             diferenca = (parseFloat(mensalidade.replace('.', '')) * 12) - totalDeServicos + cartaoamigo;
         }
 
-        $('.hestia-simulator #diferenca').val((Math.round(diferenca * 100) / 100).toFixed(2));
+        $('.hestia-simulator #diferenca').val(
+            formatReal((Math.round(diferenca * 100) / 100)
+            .toFixed(2)
+            .toString()
+            .replace('.', ''))
+        );
 
         $('.hestia-simulator .resultado .info-title').html(diferenca < 0 ? 'O Cartão Amigo não é para você' : 'Você gastou todo esse dinheiro à toa');
     })
+
+    function formatReal( int ) {
+            let tmp = int+'';
+            tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+            if( tmp.length > 6 )
+                    tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+            return tmp;
+    }
       
 })(jQuery)
 

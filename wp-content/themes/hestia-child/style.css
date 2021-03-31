@@ -247,3 +247,8 @@ section.hestia-location h2 {
     }
     
 }
+
+/* Somente para desenvolvimento */
+#bitnami-banner {
+    display: none;
+}

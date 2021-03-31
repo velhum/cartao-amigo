@@ -40,7 +40,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                 Chega de gastar com uma saúde que não utiliza
                             </h3>
                             <h3>Com o Cartão Amigo, você tem acesso a uma ampla rede de clínicas e médicos especializados.</h3>
-                            <h5 class="description">Use o simulador abaixo para ter uma ideia da difetença entre seu plano de saúde atual e o Cartão Amigo</h5>
+                            <h5 class="description">Use o simulador abaixo para ter uma ideia da diferença entre seu plano de saúde atual e o Cartão Amigo</h5>
                         </div>
                     </div>
                     <div class="hestia-simulator-content">
@@ -53,7 +53,12 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     <h4 class="info-title">Quanto você paga atualmente pelo seu plano de saúde?</h4>
                                     <div class="input-group fx-row">
                                         <span class="input-group-addon">R$</span>
-                                        <input id="mensalidade" type="text" class="form-control dinheiro fx-grow" aria-label="Mensalidade">
+                                        <input id="mensalidade"
+                                            type="text"
+                                            class="form-control dinheiro fx-grow"
+                                            aria-label="Mensalidade"
+                                            data-mask="#.##0,00"
+                                            data-mask-reverse="true">
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +103,11 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     <h4 class="info-title">Você gastou todo esse dinheiro à toa</h4>
                                     <div class="input-group fx-row">
                                         <span class="input-group-addon">R$</span>
-                                        <input id="diferenca" type="text" class="form-control dinheiro fx-grow" aria-label="diferença" disabled>
+                                        <input id="diferenca"
+                                            type="text"
+                                            class="form-control dinheiro fx-grow"
+                                            aria-label="diferença"
+                                            disabled>
                                     </div>
                                 </div>
                             </div>
