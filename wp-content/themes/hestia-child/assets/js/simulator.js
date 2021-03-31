@@ -7,6 +7,16 @@
         $('#mensalidade').val('');
     });
 
+    $('button.dropdown-toggle').on('click', (e) => {
+        // Kill click event:
+        e.stopPropagation();
+        if ($('.dropdown').find('.dropdown-menu').is(":hidden")){
+            $('.dropdown-menu').fadeIn("fast");
+        } else {
+            $('.dropdown-menu').fadeOut("fast");
+        }
+    });
+
     $('.procedimentos .procedimento .quantidade, .hestia-simulator #mensalidade').change( elm =>  {
         const cartaoamigo = 149; // Anuidade do Cartão Amigo
         let mensalidade = $('.hestia-simulator #mensalidade').val();

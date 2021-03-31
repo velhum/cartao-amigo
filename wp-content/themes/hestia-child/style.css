@@ -5,7 +5,7 @@ Description: This is a custom child theme I have created.
 Author: ThemeIsle    
 URI: https://www.themeisle.com/    
 Template: hestia  
-Version: 0.1     
+Version: 0.2
 */
 
 @font-face {
@@ -32,16 +32,8 @@ Version: 0.1
     overflow: hidden;
 }
 
-.header-filter {
-    /* background-image: url(./assets/images/hand-holding-card.jpg); */
-}
-
 body:not(.home) .header-filter {
     background-position: center -73px;
-}
-
-section {
-    /* margin: 160px 0; */
 }
 
 section.hestia-features  {
@@ -116,6 +108,7 @@ section.hestia-simulator {
 .hestia-simulator .input-group .form-control {
     flex-grow: 1;
     font-size: 32px;
+    height: 50px;
     text-align: center;
 }
 
@@ -147,11 +140,6 @@ section.hestia-simulator {
     flex-grow: 1;
 }
 
-.hestia-simulator .resultado {
-    font-size: 32px;
-    font-weight: 400;
-}
-
 .hestia-simulator h2.hestia-title {
     margin-top: 0;
 }
@@ -161,11 +149,16 @@ section.hestia-simulator {
     line-height: 24px;
 }
 
+.hestia-simulator h4.info-title {
+    min-height: 68px;
+}
+
 .hestia-simulator-content .hestia-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 /* == LOCATION == */
@@ -176,7 +169,6 @@ section.hestia-location {
     background-image: url('./assets/images/mapa-df.jpg');
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     overflow: hidden;
 }
@@ -227,6 +219,10 @@ section.hestia-location h2 {
 
 @media (max-width: 768px) {
 
+    .hestia-simulator-content .hestia-info {
+        margin-bottom: 32px;
+    }
+
     section.hestia-about {
         height: 200px;
     }
@@ -243,6 +239,11 @@ section.hestia-location h2 {
     
     .header-filter {
         background-position-x: 630px;
+    }
+
+    section.hestia-location h2 {
+        margin-left: 5%;
+        margin-right: 5%;
     }
     
 }

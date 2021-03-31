@@ -33,6 +33,8 @@
         const x = Math.floor((Math.random() * ($(window).width() - 100)) + 1);
         $('.hestia-location .container').prepend('<div class="pin" style="left: ' + x + 'px; top: ' + y + 'px"></div>');
     }
+    
+    $('.hestia-location .container .pin').attr('data-aos', 'fade-up');
 
     AOS.init({
         easing: 'ease-in-out-sine',
