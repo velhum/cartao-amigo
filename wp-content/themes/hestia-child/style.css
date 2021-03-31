@@ -9,50 +9,85 @@ Version: 0.2
 */
 
 @font-face {
-    font-family: 'Baloo Thambi 2';
-    src: url('./assets/fonts/baloothambi2-semibold.ttf') format('truetype'),
-         url('./assets/fonts/baloothambi2-semibold-webfont.woff2') format('woff2'),
-         url('./assets/fonts/baloothambi2-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Baloo Thambi 2";
+  src: url("./assets/fonts/baloothambi2-semibold.ttf") format("truetype"),
+    url("./assets/fonts/baloothambi2-semibold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/baloothambi2-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .main {
-    max-width: 1770px;
-    margin: 0 auto;
+  max-width: 1770px;
+  margin: 0 auto;
 }
 
 .header-filter::before {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .navbar-transparent ul.nav.navbar-nav {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
-    overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 body:not(.home) .header-filter {
-    background-position: center -73px;
+  background-position: center -73px;
 }
 
-section.hestia-features  {
-    margin: 0;
+h1,
+h2, 
+h3,
+h4,
+h5,
+.hestia-title,
+.hestia-title a,
+.hestia-title a:hover,
+.title,
+.title a,
+.title a:hover,
+.card-title,
+.card-title a,
+.card-title a:hover,
+.info-title,
+.info-title a,
+.info-title a:hover,
+.footer-brand,
+.footer-brand a,
+.footer-brand a:hover,
+.footer-big h4,
+.footer-big h4 a,
+.footer-big h4 a:hover,
+.footer-big h5,
+.footer-big h5 a,
+.footer-big h5 a:hover,
+.media .media-heading,
+.media .media-heading a,
+.media .media-heading a:hover,
+.woocommerce ul.products[class*="columns-"] li.product-category h2,
+.woocommerce ul.products[class*="columns-"] li.product-category h2 a,
+.woocommerce ul.products[class*="columns-"] li.product-category h2 a:hover {
+  color: #0d0540;
 }
 
-section.hestia-contact  {
-    margin-bottom: 0;
+section.hestia-features {
+  margin: 0;
+}
+
+section.hestia-contact {
+  margin-bottom: 0;
 }
 
 section.hestia-about {
-    /* background-image: url(./assets/images/acreditamos.jpg); */
-    height: 400px;
-    background-position: center center;
-    background-size: contain;
+  /* background-image: url(./assets/images/acreditamos.jpg); */
+  height: 400px;
+  background-position: center center;
+  background-size: contain;
 }
 
 section.hestia-about.section-image:after {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* == TIPOGRAFIA == */
@@ -64,7 +99,7 @@ h4.card-title,
 h4.card-title a,
 div#main-navigation,
 .buttons a.btn {
-    font-family: 'Baloo Thambi 2', 'Roboto';
+  font-family: "Baloo Thambi 2", "Roboto";
 }
 
 div#main-navigation ul.nav.navbar-nav li a,
@@ -76,179 +111,187 @@ input[type="button"],
 }
 
 .carousel h1.hestia-title span {
-    background: linear-gradient(to right, #ff6600, #ffd900);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #ff6600, #ffd900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.hestia-simulator {
-    text-align: center;
-    padding: 75px 0;
+  text-align: center;
+  padding: 75px 0;
 }
 
 /* == Flex layout == */
 
 .fx-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* == SIMULATOR == */
 
 .hestia-simulator .input-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
 }
 
 .hestia-simulator .input-group .form-control {
-    flex-grow: 1;
-    font-size: 32px;
-    height: 50px;
-    text-align: center;
+  flex-grow: 1;
+  font-size: 32px;
+  height: 50px;
+  text-align: center;
 }
 
-.hestia-simulator .procedimentos ul.dropdown-menu,
-.hestia-simulator .procedimentos button {
-    width: 100%;
+.hestia-simulator ul.procedimentos {
+  margin: 0;
+  padding: 0;
 }
 
-.hestia-simulator div.procedimentos {
-    flex-grow: 1;
+.hestia-simulator ul.procedimentos li.procedimento {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  justify-content: space-between;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
 }
 
-.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento {
-    display: flex;
-    flex-direction: row;
-    padding: 8px;
-    justify-content: space-between;
-    font-size: 18px;
+.hestia-simulator ul.procedimentos li.procedimento .quantidade {
+  border: none;
+  flex-grow: 0;
+  width: 48px;
+  text-align: right;
 }
 
-.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento .quantidade {
-    border: none;
-    flex-grow: 0;
-    width: 48px;
-    text-align: right;
+.hestia-simulator ul.procedimentos li.procedimento .descricao {
+  flex-grow: 1;
+  text-align: left;
 }
 
-.hestia-simulator .procedimentos ul.dropdown-menu li.procedimento .descricao {
-    flex-grow: 1;
+.hestia-simulator ul.procedimentos li.procedimento .range {
+  font-size: 11px;
+  font-style: italic;
 }
 
 .hestia-simulator h2.hestia-title {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .hestia-simulator h3 {
-    font-size: 20px;
-    line-height: 24px;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .hestia-simulator h4.info-title {
-    min-height: 68px;
+  min-height: 68px;
 }
 
 .hestia-simulator-content .hestia-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 /* == LOCATION == */
 
 section.hestia-location {
-    height: 600px;
-    position: relative;
-    background-image: url('./assets/images/mapa-df.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  height: 600px;
+  position: relative;
+  background-image: url("./assets/images/mapa-df.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 @keyframes jump {
-    0%   {transform: translate3d(0,0,0)}
-    40%  {transform: translate3d(0,10%,0)}
-    100% {transform: translate3d(0,30%,0)}
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 30%, 0);
+  }
 }
 
 section.hestia-location .pin {
-    background-position: center center;
-    background-size: cover;
-    background-image: url('./assets/images/pin.png');
-    width: 38px;
-    height: 50px;
-    animation: jump .5s linear alternate infinite;
-    position: absolute;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("./assets/images/pin.png");
+  width: 38px;
+  height: 50px;
+  animation: jump 0.5s linear alternate infinite;
+  position: absolute;
 }
 
 section.hestia-location .container {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 section.hestia-location h2 {
-    background-color: #fd6925;
-    color: #FFF;
-    padding: 16px 32px;
-    border-radius: 32px;
-    box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%), 0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
-    text-align: center;
-    line-height: 34px;
-    z-index: 2;
+  background-color: #fd6925;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 32px;
+  box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%),
+    0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
+  text-align: center;
+  line-height: 34px;
+  z-index: 2;
 }
 
 .hestia-location-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .jump {
-    transform-origin: 50% 50%;
-    animation: jump .5s ease alternate infinite;
+  transform-origin: 50% 50%;
+  animation: jump 0.5s ease alternate infinite;
 }
 
 @media (max-width: 768px) {
+  .hestia-simulator-content .hestia-info {
+    margin-bottom: 32px;
+  }
 
-    .hestia-simulator-content .hestia-info {
-        margin-bottom: 32px;
-    }
+  section.hestia-about {
+    height: 200px;
+  }
 
-    section.hestia-about {
-        height: 200px;
-    }
-    
-    section {
-        margin: 0;
-    }
-    
-    .navbar-transparent ul.nav.navbar-nav {
-        background-color: transparent;
-        border-radius: 0px;
-        overflow: auto;
-    }
-    
-    .header-filter {
-        background-position-x: 630px;
-    }
+  section {
+    margin: 0;
+  }
 
-    section.hestia-location h2 {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
+  .navbar-transparent ul.nav.navbar-nav {
+    background-color: transparent;
+    border-radius: 0px;
+    overflow: auto;
+  }
+
+  .header-filter {
+    background-position-x: 630px;
+  }
+
+  section.hestia-location h2 {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 /* Somente para desenvolvimento */
 #bitnami-banner {
-    display: none;
+  display: none;
 }

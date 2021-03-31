@@ -50,7 +50,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     <div class="icon" style="color:#4caf50">
                                         <i class="fas fa-money-bill-wave"></i>
                                     </div>
-                                    <h4 class="info-title">Quanto você paga atualmente pelo seu plano de saúde?</h4>
+                                    <h4 class="info-title">Valor mensal do plano de saúde de sua família</h4>
                                     <div class="input-group fx-row">
                                         <span class="input-group-addon">R$</span>
                                         <input id="mensalidade"
@@ -60,6 +60,15 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                             data-mask="#.##0,00"
                                             data-mask-reverse="true">
                                     </div>
+                                    <h4 class="info-title">Valor que você pagou por ano</h4>
+                                    <div class="input-group fx-row">
+                                        <span class="input-group-addon">R$</span>
+                                        <input id="anuidade"
+                                            type="text"
+                                            class="form-control dinheiro fx-grow"
+                                            aria-label="Anuidade"
+                                            disabled>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-4 feature-box">
@@ -67,46 +76,62 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     <div class="icon" style="color:#00bcd4">
                                         <i class="fas fa-check"></i>
                                     </div>
-                                    <h4 class="info-title">Nos últimos 12 meses, quais serviços você utilizou?</h4>
-                                    <div class="fx-row" style="width: 100%">
-                                        <div class="dropup dropdown procedimentos">
-                                            <button class="btn btn-primary dropdown-toggle" type="button" id="menu-procedimetos"
-                                                data-toggle="dropdown"
-                                                aria-haspopup="true"
-                                                aria-expanded="false">
-                                                Serviços
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="menu-procedimetos">
-                                                <li class="procedimento">
-                                                    <span class="descricao" data-valor="100.00">Consulta</span>
-                                                    <input type="number" class="quantidade" value="0">
-                                                </li>
-                                                <li class="procedimento">
-                                                    <span class="descricao" data-valor="233.99">Procedimento 1</span>
-                                                    <input type="number" class="quantidade" value="0">
-                                                </li>
-                                                <li class="procedimento">
-                                                    <span class="descricao" data-valor="362.45">Procedimento 2</span>
-                                                    <input type="number" class="quantidade" value="0">
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <h4 class="info-title">Procedimentos médicos que você realizou nos últimos 12 meses</h4>
+                                    <ul class="procedimentos">
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="300">Tomografia <span class="range">(de 0 a 5)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="120">Ultrassonografia <span class="range">(de 0 a 5)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="65">Mamografia <span class="range">(de 0 a 5)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="500">Ressonância <span class="range">(de 0 a 5)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="350">Exames de sangue <span class="range">(de 0 a 5)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="100">Consulta médica <span class="range">(de 0 a 10)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="350">Endoscopia digestiva <span class="range">(de 0 a 3)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                        <li class="procedimento">
+                                            <span class="descricao" data-valor="400">Colonoscopia <span class="range">(de 0 a 1)</span> </span>
+                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-4 feature-box">
                                 <div class="hestia-info resultado">
-                                    <div class="icon" style="color:#e91e63">
-                                        <i class="far fa-sad-tear"></i>
+                                    <div class="icon" style="color:#fd6925">
+                                        <i class="far fa-smile-beam"></i>
                                     </div>
-                                    <h4 class="info-title">Você gastou todo esse dinheiro à toa</h4>
+                                    <h4 class="info-title">O que você teria gasto se tivesse o Cartão Amigo</h4>
+                                    <div class="input-group fx-row">
+                                        <span class="input-group-addon">R$</span>
+                                        <input id="gasto-cartao-amigo"
+                                            type="text"
+                                            class="form-control dinheiro fx-grow"
+                                            disabled>
+                                    </div>
+                                    <h4 class="info-title">Dinheiro que você deixou de economizar</h4>
                                     <div class="input-group fx-row">
                                         <span class="input-group-addon">R$</span>
                                         <input id="diferenca"
                                             type="text"
                                             class="form-control dinheiro fx-grow"
-                                            aria-label="diferença"
                                             disabled>
                                     </div>
                                 </div>
