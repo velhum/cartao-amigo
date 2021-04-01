@@ -71,6 +71,10 @@ h5,
   color: #0d0540;
 }
 
+.description {
+  color: #fd6925;
+}
+
 section.hestia-features {
   margin: 0;
 }
@@ -116,11 +120,6 @@ input[type="button"],
   -webkit-text-fill-color: transparent;
 }
 
-section.hestia-simulator {
-  text-align: center;
-  padding: 75px 0;
-}
-
 /* == Flex layout == */
 
 .fx-row {
@@ -131,6 +130,11 @@ section.hestia-simulator {
 }
 
 /* == SIMULATOR == */
+
+section.hestia-simulator {
+  text-align: center;
+  padding: 75px 0;
+}
 
 .hestia-simulator .input-group {
   display: flex;
@@ -239,6 +243,7 @@ section.hestia-location {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  box-shadow: inset 0 0 10px rgb(0 0 0 / 50%);
 }
 
 @keyframes jump {
@@ -292,8 +297,55 @@ section.hestia-location h2 {
   animation: jump 0.5s ease alternate infinite;
 }
 
+/* == REGISTER == */
+
+section.hestia-register h4.card-title {
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+}
+
+section.hestia-register p.preco {
+  color: #fff;
+  background-color: #fd6925;
+  padding: 0 12px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 48px;
+  border-radius: 5px;
+}
+
+section.hestia-register p.card-description {
+  text-align: left;
+  font-size: 18px;
+}
+
+section.hestia-register h2,
+section.hestia-register h3 {
+  text-align: center;
+}
+
+section.hestia-register h2.hestia-title {
+  margin-bottom: 0;
+}
+
+section.hestia-register h3.description {
+  margin-top: 0;
+}
+
+.hestia-register-content .hestia-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+
 @media (max-width: 768px) {
-  .hestia-simulator-content .hestia-info {
+  .hestia-simulator-content .hestia-info,
+  .hestia-register-content .hestia-info {
     margin-bottom: 32px;
   }
 
