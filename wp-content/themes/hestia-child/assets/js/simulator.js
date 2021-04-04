@@ -9,17 +9,19 @@
         $('#mensalidade').val('');
     });
 
-    $('button.dropdown-toggle').on('click', (e) => {
-        // Kill click event:
-        e.stopPropagation();
-        if ($('.dropdown').find('.dropdown-menu').is(":hidden")){
-            $('.dropdown-menu').fadeIn("fast");
-        } else {
-            $('.dropdown-menu').fadeOut("fast");
-        }
-    });
 
-    $('.procedimentos .procedimento .quantidade, .hestia-simulator #mensalidade').on('change', elm =>  {
+    $('.procedimentos .procedimento .quantidade, .hestia-simulator #mensalidade').on('change', executaCalculos);
+
+    function formatReal( int ) {
+        int = int * 100
+        let tmp = int+'';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if( tmp.length > 6 )
+                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+        return tmp;
+    }
+
+    function executaCalculos() {
         let mensalidade = $('.hestia-simulator #mensalidade').val();
         let totalDeServicos = 0;
         let diferenca = 0;
@@ -35,12 +37,6 @@
         
         diferenca = anuidadePlanoSaude - totalDeServicos;
 
-        console.log(
-            'gastoCartaoAmigo', gastoCartaoAmigo,
-            'diferenca', diferenca,
-            'totalDeServicos', totalDeServicos
-        );
-
         $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(parseFloat(gastoCartaoAmigo)));
 
         if ( parseInt(mensalidade) !== 0){
@@ -55,16 +51,22 @@
             );
         }
 
+    }
+
+    $('.procedimento .mais-ou-menos').on('click', (ev) => {
+        // console.log($(ev.target).siblings('.quantidade'));
+        let quantidade = parseInt($(ev.target).siblings('.quantidade').val());
+        const max = parseInt($(ev.target).siblings('.quantidade').attr('max'));
+        const min = 0;
+        if ( $(ev.target).hasClass('mais') ) {
+            if ( quantidade < max ) quantidade++;
+        } else {
+            if ( quantidade > min ) quantidade--;
+        }
+        $(ev.target).siblings('.valor').text(quantidade);
+        $(ev.target).siblings('.quantidade').val(quantidade);
+        executaCalculos();
     })
 
-    function formatReal( int ) {
-        int = int * 100
-        let tmp = int+'';
-        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-        if( tmp.length > 6 )
-                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-        return tmp;
-    }
-      
 })(jQuery)
 

@@ -177,6 +177,7 @@ section.hestia-simulator {
 .hestia-simulator ul.procedimentos li.procedimento .descricao {
   flex-grow: 1;
   text-align: left;
+  line-height: 12px;
 }
 
 .hestia-simulator ul.procedimentos li.procedimento .range {
@@ -231,6 +232,29 @@ section.hestia-simulator .icon.varios img:nth-child(3) {
 
 section.hestia-simulator .icon.varios img:nth-child(4) {
     animation-delay: 300ms;
+}
+
+section.hestia-simulator div.mais-ou-menos {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  box-shadow:  2px 2px 0 rgb(253 105 37 / 14%), 0 3px 1px -2px rgb(253 105 37 / 20%), 0 1px 5px 0 rgb(253 105 37 / 12%);
+  background-color: #fd6925;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+
+section.hestia-simulator div.mais-ou-menos:hover {
+  box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%), 0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
+}
+
+section.hestia-simulator .valor {
+  padding: 0 8px;
+  font-weight: 400;
 }
 
 /* == LOCATION == */
@@ -374,6 +398,16 @@ section.hestia-partners .partner {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* == CONTACT == */
+
+section.hestia-contact div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+}
+
+section.hestia-contact h4.card-title {
+  text-transform: uppercase;
 }
 
 

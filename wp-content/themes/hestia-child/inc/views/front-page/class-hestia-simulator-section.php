@@ -85,36 +85,62 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     <h4 class="info-title">Procedimentos médicos que você realizou nos últimos 12 meses</h4>
                                     <ul class="procedimentos">
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="300">Tomografia <span class="range">(de 0 a 5)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <span class="descricao" data-valor="300">
+                                                Tomografia <span class="range"><br />(de 0 a 5)</span>
+                                            </span>
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="120">Ultrassonografia <span class="range">(de 0 a 5)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <span class="descricao" data-valor="120">Ultrassonografia <span class="range"><br />(de 0 a 5)</span> </span>
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="65">Mamografia <span class="range">(de 0 a 5)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="65">Mamografia <span class="range"><br />(de 0 a 5)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="500">Ressonância <span class="range">(de 0 a 5)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="500">Ressonância <span class="range"><br />(de 0 a 5)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="350">Exames de sangue <span class="range">(de 0 a 5)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="350">Exames de sangue <span class="range"><br />(de 0 a 5)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="100">Consulta médica <span class="range">(de 0 a 10)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="100">Consulta médica <span class="range"><br />(de 0 a 10)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="10">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="350">Endoscopia digestiva <span class="range">(de 0 a 3)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="350">Endoscopia digestiva <span class="range"><br />(de 0 a 3)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="3">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="400">Colonoscopia <span class="range">(de 0 a 1)</span> </span>
-                                            <input type="number" class="quantidade" value="0" min="0" max="5">
+                                            <span class="descricao" data-valor="400">Colonoscopia <span class="range"><br />(de 0 a 1)</span> </span>
+                                            <input type="hidden" class="quantidade" value="0" max="1">
+                                            <div class="mais-ou-menos menos" role="button">-</div>
+                                            <div class="valor">0</div>
+                                            <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                     </ul>
                                 </div>
