@@ -1,11 +1,24 @@
 <?php
+
+define('VERSION', '0.5.0');
+
 if ( !defined( 'ABSPATH' ) ) exit;
 
 if ( !function_exists( 'hestia_child_parent_css' ) ):
     function hestia_child_parent_css() {
-        wp_enqueue_style( 'hestia_child_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array( 'bootstrap' ) );
+        wp_enqueue_style(
+			'hestia_child_parent',
+			trailingslashit( get_template_directory_uri() ) . 'style.css',
+			array( 'bootstrap' ),
+			VERSION
+		);
 		if( is_rtl() ) {
-			wp_enqueue_style( 'hestia_child_parent_rtl', trailingslashit( get_template_directory_uri() ) . 'style-rtl.css', array( 'bootstrap' ) );
+			wp_enqueue_style(
+				'hestia_child_parent_rtl',
+				trailingslashit( get_template_directory_uri() ) . 'style-rtl.css',
+				array( 'bootstrap' ),
+				VERSION
+			);
 		}
 		wp_enqueue_style( 'aos-style', get_stylesheet_directory_uri() . '/assets/css/aos.css', array() );
     }
@@ -38,7 +51,7 @@ function my_custom_scripts() {
 		'jquery-mask',
 		get_stylesheet_directory_uri() . '/assets/js/jquery.mask.js',
 		array( 'jquery' ), // Dependências
-		true, // incluir número da versão
+		VERSION, // incluir número da versão
 		true  // Carregar ao final (antes de </body>)
 	);
 
@@ -46,7 +59,7 @@ function my_custom_scripts() {
 		'aos-js',
 		get_stylesheet_directory_uri() . '/assets/js/aos.js',
 		array( 'jquery' ), // Dependências
-		true, // incluir número da versão
+		VERSION, // incluir número da versão
 		true  // Carregar ao final (antes de </body>)
 	);
 
@@ -54,7 +67,7 @@ function my_custom_scripts() {
 		'scripts-js',
 		get_stylesheet_directory_uri() . '/scripts.js',
 		array( 'jquery' ), // Dependências
-		true, // incluir número da versão
+		VERSION, // incluir número da versão
 		true  // Carregar ao final (antes de </body>)
 	);
 
@@ -63,7 +76,7 @@ function my_custom_scripts() {
 			'simulator-js',
 			get_stylesheet_directory_uri() . '/assets/js/simulator.js',
 			array( 'jquery'), // Dependências
-			true, // incluir número da versão
+			VERSION, // incluir número da versão
 			true  // Carregar ao final (antes de </body>)
 		);
 	}
@@ -75,7 +88,7 @@ function my_custom_scripts() {
 			'rede-credenciada',
 			get_stylesheet_directory_uri() . '/assets/js/rede-credenciada.js',
 			array( 'jquery' ), // Dependências
-			true, // incluir número da versão
+			VERSION, // incluir número da versão
 			true  // Carregar ao final (antes de </body>)
 		);
 	}
