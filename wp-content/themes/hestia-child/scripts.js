@@ -23,7 +23,7 @@
     $('article.card.card-blog').attr('data-aos', 'fade-up');
 
     /* Aplica degrade no 'amigo' do título da home */
-    $('.carousel h1.hestia-title').html('cartão<span class="amigo-degrade">amigo</span>');
+    // $('.carousel h1.hestia-title').html('cartão<span class="amigo-degrade">amigo</span>');
 
     /* Insere diversos PINs na sessão Location */
     const larguraLocation = $('.hestia-location .container').width();

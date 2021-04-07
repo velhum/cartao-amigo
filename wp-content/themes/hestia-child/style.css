@@ -5,7 +5,7 @@ Description: This is a custom child theme I have created.
 Author: ThemeIsle    
 URI: https://www.themeisle.com/    
 Template: hestia  
-Version: 0.5.0
+Version: 0.6.0
 */
 
 @font-face {
@@ -102,7 +102,8 @@ h2.hestia-title,
 h4.card-title,
 h4.card-title a,
 div#main-navigation,
-.buttons a.btn {
+.buttons a.btn,
+div#main-navigation ul.nav.navbar-nav li a {
   font-family: "Baloo Thambi 2", "Roboto";
 }
 
@@ -114,11 +115,13 @@ input[type="button"],
   font-size: 16px;
 }
 
+/*
 .carousel h1.hestia-title span {
   background: linear-gradient(to right, #ff6600, #ffd900);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+*/
 
 /* == Flex layout == */
 
@@ -128,6 +131,26 @@ input[type="button"],
   justify-content: space-between;
   align-items: center;
 }
+
+/* HEADER */
+
+.carousel h1.hestia-title {
+  text-indent: -9999px;
+  display: block;
+  width: 340px;
+  height: 126px;
+  background-image: url("./assets/images/logo-cartao-amigo-header.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 20px auto !important;
+}
+
+nav.navbar-transparent div#main-navigation ul.nav.navbar-nav li a,
+nav.navbar-transparent div#main-navigation ul.nav.navbar-nav li a:hover {
+  color: #FFF;
+  opacity: 1;
+}
+
 
 /* == SIMULATOR == */
 
