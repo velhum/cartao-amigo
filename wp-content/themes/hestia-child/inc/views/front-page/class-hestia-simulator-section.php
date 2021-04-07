@@ -48,7 +48,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                             <div class="col-xs-12 col-md-4 feature-box">
                                 <div class="hestia-info">
                                     <div class="icon" style="color:#4caf50">
-                                        <i class="fas fa-money-bill-wave"></i>
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
                                     </div>
                                     <h4 class="info-title">Valor mensal do plano de saúde de sua família</h4>
                                     <div class="input-group fx-row">
@@ -61,10 +61,10 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                             data-mask-reverse="true">
                                     </div>
                                     <div class="icon varios" style="color:#4caf50">
-                                        <i class="fas fa-money-bill-wave"></i>
-                                        <i class="fas fa-money-bill-wave"></i>
-                                        <i class="fas fa-money-bill-wave"></i>
-                                        <i class="fas fa-money-bill-wave"></i>
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
                                     </div>
                                     <h4 class="info-title">Valor que você pagou por ano</h4>
                                     <div class="input-group fx-row">
@@ -79,67 +79,57 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                             </div>
                             <div class="col-xs-12 col-md-4 feature-box">
                                 <div class="hestia-info">
-                                    <div class="icon" style="color:#00bcd4">
-                                        <i class="fas fa-check"></i>
+                                    <div class="icon" style="color:#F00">
+                                        <i class="fas fa-briefcase-medical"></i>
                                     </div>
                                     <h4 class="info-title">Procedimentos médicos que você realizou nos últimos 12 meses</h4>
                                     <ul class="procedimentos">
                                         <li class="procedimento">
-                                            <input type="hidden" class="quantidade" value="0" max="5">
-                                            <span class="descricao" data-valor="300">
-                                                Tomografia <span class="range"><br />(de 0 a 5)</span>
-                                            </span>
+                                            <span class="descricao" data-valor="300">Tomografia</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" class="quantidade" value="0" max="5" readonly>
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <input type="hidden" class="quantidade" value="0" max="5">
-                                            <span class="descricao" data-valor="120">Ultrassonografia <span class="range"><br />(de 0 a 5)</span> </span>
+                                            <span class="descricao" data-valor="120">Ultrassonografia</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="5">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="65">Mamografia <span class="range"><br />(de 0 a 5)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <span class="descricao" data-valor="65">Mamografia</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="5">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="500">Ressonância <span class="range"><br />(de 0 a 5)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <span class="descricao" data-valor="500">Ressonância</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="5">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="350">Exames de sangue <span class="range"><br />(de 0 a 5)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="5">
+                                            <span class="descricao" data-valor="350">Exames de sangue</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="5">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="100">Consulta médica <span class="range"><br />(de 0 a 10)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="10">
+                                            <span class="descricao" data-valor="100">Consulta médica</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="10">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="350">Endoscopia digestiva <span class="range"><br />(de 0 a 3)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="3">
+                                            <span class="descricao" data-valor="350">Endoscopia digestiva</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="3">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                         <li class="procedimento">
-                                            <span class="descricao" data-valor="400">Colonoscopia <span class="range"><br />(de 0 a 1)</span> </span>
-                                            <input type="hidden" class="quantidade" value="0" max="1">
+                                            <span class="descricao" data-valor="400">Colonoscopia</span>
                                             <div class="mais-ou-menos menos" role="button">-</div>
-                                            <div class="valor">0</div>
+                                            <input type="text" readonly class="quantidade" value="0" max="1">
                                             <div class="mais-ou-menos mais" role="button">+</div>
                                         </li>
                                     </ul>
@@ -158,11 +148,11 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                             class="form-control dinheiro fx-grow"
                                             disabled>
                                     </div>
-                                    <div class="icon varios" style="color:#fd6925">
-                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
-                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
-                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
-                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.svg' ?>">
+                                    <div class="icon varios">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
                                     </div>
                                     <h4 class="info-title">Dinheiro que você deixou de economizar</h4>
                                     <div class="input-group fx-row">

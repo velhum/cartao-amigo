@@ -185,16 +185,21 @@ section.hestia-simulator {
   flex-direction: row;
   padding: 8px;
   justify-content: space-between;
+  align-items: center;
   font-size: 18px;
   border-bottom: 1px solid #ccc;
   margin: 6px 0;
 }
 
 .hestia-simulator ul.procedimentos li.procedimento .quantidade {
-  border: none;
+  background-image: none;
+  margin-bottom: 0;
   flex-grow: 0;
-  width: 48px;
-  text-align: right;
+  width: 40px;
+  text-align: center;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .hestia-simulator ul.procedimentos li.procedimento .descricao {
@@ -236,24 +241,23 @@ section.hestia-simulator .icon.varios {
     justify-content: space-between;
 }
 
-section.hestia-simulator .icon.varios img {
-    width: 25%;
+section.hestia-simulator .resultado .icon.varios img {
     animation: jump 0.5s linear alternate infinite;
 }
 
-section.hestia-simulator .icon.varios img:nth-child(1) {
+section.hestia-simulator .resultado .icon.varios img:nth-child(1) {
     animation-delay: 0;
 }
 
-section.hestia-simulator .icon.varios img:nth-child(2) {
+section.hestia-simulator .resultado .icon.varios img:nth-child(2) {
     animation-delay: 100ms;
 }
 
-section.hestia-simulator .icon.varios img:nth-child(3) {
+section.hestia-simulator .resultado .icon.varios img:nth-child(3) {
     animation-delay: 200ms;
 }
 
-section.hestia-simulator .icon.varios img:nth-child(4) {
+section.hestia-simulator .resultado .icon.varios img:nth-child(4) {
     animation-delay: 300ms;
 }
 
@@ -273,11 +277,6 @@ section.hestia-simulator div.mais-ou-menos {
 
 section.hestia-simulator div.mais-ou-menos:hover {
   box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%), 0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
-}
-
-section.hestia-simulator .valor {
-  padding: 0 8px;
-  font-weight: 400;
 }
 
 /* == LOCATION == */

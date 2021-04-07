@@ -5,10 +5,13 @@
     $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(parseFloat(anuidadeCartaoAmigo)));
 
     $('#mensalidade, #anuidade, #diferenca').val('0,00');
+    
     $('#mensalidade').on('focus', () => {
         $('#mensalidade').val('');
+        $('#diferenca, #anuidade, #gasto-cartao-amigo').val('0,00');
     });
 
+    $('#mensalidade').on('keyup', executaCalculos);
 
     $('.procedimentos .procedimento .quantidade, .hestia-simulator #mensalidade').on('change', executaCalculos);
 
@@ -22,11 +25,12 @@
     }
 
     function executaCalculos() {
-        let mensalidade = $('.hestia-simulator #mensalidade').val();
+        let mensalidade = $('.hestia-simulator #mensalidade').val()
+        mensalidade = mensalidade ? parseFloat(mensalidade.replace('.', '').replace(',', '.')) : 0;
         let totalDeServicos = 0;
         let diferenca = 0;
         let procedimentos = $('.procedimentos .procedimento');
-        let anuidadePlanoSaude = parseFloat(mensalidade) * 12;
+        let anuidadePlanoSaude = mensalidade * 12;
 
         let gastoCartaoAmigo = anuidadeCartaoAmigo // Anuidade do CA + Total de serviços
 
@@ -54,7 +58,6 @@
     }
 
     $('.procedimento .mais-ou-menos').on('click', (ev) => {
-        // console.log($(ev.target).siblings('.quantidade'));
         let quantidade = parseInt($(ev.target).siblings('.quantidade').val());
         const max = parseInt($(ev.target).siblings('.quantidade').attr('max'));
         const min = 0;
