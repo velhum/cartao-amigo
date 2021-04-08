@@ -73,8 +73,22 @@ function my_custom_scripts() {
 
 	if( is_front_page() ){
 		wp_enqueue_script(
+			'jquery-visible-js',
+			get_stylesheet_directory_uri() . '/assets/js/jquery.visible.min.js',
+			array( 'jquery'), // Dependências
+			VERSION, // incluir número da versão
+			true  // Carregar ao final (antes de </body>)
+		);
+		wp_enqueue_script(
 			'simulator-js',
 			get_stylesheet_directory_uri() . '/assets/js/simulator.js',
+			array( 'jquery'), // Dependências
+			VERSION, // incluir número da versão
+			true  // Carregar ao final (antes de </body>)
+		);
+		wp_enqueue_script(
+			'mapa-js',
+			get_stylesheet_directory_uri() . '/assets/js/mapa.js',
 			array( 'jquery'), // Dependências
 			VERSION, // incluir número da versão
 			true  // Carregar ao final (antes de </body>)

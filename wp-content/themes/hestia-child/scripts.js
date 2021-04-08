@@ -22,20 +22,6 @@
     /* Blog */
     $('article.card.card-blog').attr('data-aos', 'fade-up');
 
-    /* Aplica degrade no 'amigo' do título da home */
-    // $('.carousel h1.hestia-title').html('cartão<span class="amigo-degrade">amigo</span>');
-
-    /* Insere diversos PINs na sessão Location */
-    const larguraLocation = $('.hestia-location .container').width();
-    const alturaLocation = $('.hestia-location .container').height();
-    for (let i = 1; i <= 30; i++){
-        const y = Math.floor((Math.random() * ($(window).height() - 100)) + 1);
-        const x = Math.floor((Math.random() * ($(window).width() - 100)) + 1);
-        $('.hestia-location .container').prepend('<div class="pin" style="left: ' + x + 'px; top: ' + y + 'px"></div>');
-    }
-    
-    $('.hestia-location .container .pin').attr('data-aos', 'fade-up');
-
     AOS.init({
         easing: 'ease-in-out-sine',
         once: false,

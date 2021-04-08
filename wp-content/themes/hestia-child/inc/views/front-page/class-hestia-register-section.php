@@ -34,9 +34,6 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 hestia-register-title-area">
                             <h2 class="hestia-title">Associe-se</h2>
-                            <h3 class="description">
-                                Como funciona?
-                            </h3>
                         </div>
                     </div>
                     <div class="hestia-register-content">
@@ -48,9 +45,13 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                     </div>
                                     <div class="col-md-7">
                                         <div class="content">
-                                            <h4 class="card-title">Escolha o plano que mais se adequa a você!</h4>
-                                            <p class="preco">R$ 149,00/Ano</p>
-                                            <p class="preco">R$ 14,90/Mês</p>
+                                            <h4 class="card-title">Plano anual</h4>
+                                            <p class="preco">de <span class="riscado">R$ 249,00</span><br /> por R$ 149,00</p>
+                                            <div class="buttons text-center">
+                                                <a href="/?p=69&plano=anual" title="Quero!" class="btn btn-primary">
+                                                    Quero! Só R$ 149,00/Ano
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +63,13 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                     </div>
                                     <div class="col-md-7">
                                         <div class="content">
-                                            <h4 class="card-title">E tenha acesso a uma ampla rede de descontos</h4>
-                                            <p class="card-description">São mais de trocentas clínicas credenciadas com profissionais das mais diversas especialidades</p>
+                                            <h4 class="card-title">Plano mensal</h4>
+                                            <p class="preco">de <span class="riscado">R$ 24,90</span><br /> por R$ 14,90</p>
+                                            <div class="buttons text-center">
+                                                <a href="/?p=69&plano=mensal" title="Quero!" class="btn btn-primary">
+                                                    Quero! Só R$ 14,90/Mês
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +77,7 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                         </div>
                     </div>
                     <div class="buttons text-center">
-                        <a href="/?p=69" title="Saiba mais" class="btn btn-primary">Saiba mais...</a>
+                        <a href="/?p=69" title="Saiba mais" class="btn btn-primary">Seja Amigo!</a>
 	                </div>
 
                 </div>

@@ -115,6 +115,10 @@ input[type="button"],
   font-size: 16px;
 }
 
+span.riscado {
+  text-decoration: line-through;
+}
+
 /*
 .carousel h1.hestia-title span {
   background: linear-gradient(to right, #ff6600, #ffd900);
@@ -161,9 +165,9 @@ section.hestia-simulator {
 
 .hestia-simulator .input-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   font-size: 32px;
 }
 
@@ -214,7 +218,7 @@ section.hestia-simulator {
 }
 
 .hestia-simulator h2.hestia-title {
-  margin-top: 0;
+  margin: 0 auto 32px auto;
 }
 
 .hestia-simulator h3 {
@@ -222,16 +226,32 @@ section.hestia-simulator {
   line-height: 24px;
 }
 
-.hestia-simulator h4.info-title {
-  min-height: 68px;
-}
-
 .hestia-simulator-content .hestia-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
+  min-height: 675px;
+}
+
+.hestia-simulator-content .hestia-info:nth-child(1) {
+  padding-right: 32px;
+}
+
+.hestia-simulator-content .hestia-info:nth-child(3) {
+  padding-left: 32px;
+}
+
+.hestia-simulator-content .hestia-info-bloco {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.hestia-simulator-content .hestia-info-bloco h4.info-title {
+  font-size: 22px;
+  line-height: 26px;
 }
 
 section.hestia-simulator .icon.varios {
@@ -277,6 +297,26 @@ section.hestia-simulator div.mais-ou-menos {
 
 section.hestia-simulator div.mais-ou-menos:hover {
   box-shadow: 0 14px 26px -12px rgb(253 105 37 / 42%), 0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(253 105 37 / 20%);
+}
+
+@media (max-width: 768px) {
+
+  .hestia-simulator-content .hestia-info:nth-child(1) {
+    padding-right: 0;
+  }
+  
+  .hestia-simulator-content .hestia-info:nth-child(3) {
+    padding-left: 0;
+  }
+    
+  .hestia-simulator-content .hestia-info {
+    min-height: unset;
+  }
+  
+  .hestia-simulator-content .hestia-info-bloco:first-child {
+    margin-bottom: 64px;
+  }
+  
 }
 
 /* == LOCATION == */
@@ -352,16 +392,16 @@ section.hestia-register {
 section.hestia-register h4.card-title {
   font-size: 24px;
   line-height: 30px;
-  text-align: left;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 section.hestia-register p.preco {
-  color: #fff;
-  background-color: #fd6925;
+  color: #fd6925;
   padding: 0 12px;
   font-size: 28px;
   font-weight: bold;
-  line-height: 48px;
+  line-height: 32px;
   border-radius: 5px;
 }
 
