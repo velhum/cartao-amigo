@@ -5,7 +5,7 @@ Description: This is a custom child theme I have created.
 Author: ThemeIsle    
 URI: https://www.themeisle.com/    
 Template: hestia  
-Version: 0.6.0
+Version: 0.7.0
 */
 
 @font-face {
@@ -501,6 +501,18 @@ section.hestia-contact h4.card-title {
     margin-left: 5%;
     margin-right: 5%;
   }
+}
+
+/* Social Feed */
+
+.hestia-social-feed {
+  padding: 32px 0;
+}
+
+section.hestia-social-feed h2.hestia-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Somente para desenvolvimento */

@@ -22,6 +22,9 @@ $register = new Hestia_Register_Section();
 require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-partners-section.php');
 $partners = new Hestia_Partners_Section();
 
+require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-social-feed-section.php');
+$socialFeed = new Hestia_Social_Feed_Section();
+
 $blog         = new Hestia_Blog_Section();
 $about        = new Hestia_About_Section();
 $subscribe    = new Hestia_Subscribe_Section();
@@ -62,7 +65,8 @@ if ( ! is_page_template() && ! get_theme_mod( 'disable_frontpage_sections', fals
 		$register->init();
 		$partners->init();
 		$subscribe->do_section();
-		$blog->do_section();
+		$socialFeed->init();
+		// $blog->do_section();
 		$contact->do_section();
 
 
