@@ -23,7 +23,7 @@
     $('article.card.card-blog').attr('data-aos', 'fade-up');
 
     /* Login form */
-    $('li.menu-item a[title="Login"], .ca-modal-container').on('click', () => {
+    $('li.menu-item a[title="Login"], #ca-login-form .btn.btn-primary[title="Cancelar"]').on('click', () => {
         const display = $('#ca-modal').css('display');
         if (display == 'none') {
             $('#ca-modal').css('display', 'block')

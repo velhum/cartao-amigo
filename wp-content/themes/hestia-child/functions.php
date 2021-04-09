@@ -1,6 +1,6 @@
 <?php
 
-define('VERSION', '0.8.0');
+define('VERSION', '0.8.1');
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -152,7 +152,8 @@ function login_form(){
 							<input type="password" name="senha" class="form-control" placeholder="Senha" aria-describedby="Login">
 		  				</div>';
 	echo '				<div class="btn-group btn-group-sm text-center">';
-	echo '					<a href="/blog" title="Entrar" class="btn btn-primary">Entrar</a>';
+	echo '					<a href="#" title="Cancelar" class="btn btn-primary">Cancelar</a>';
+	echo '					<a href="#" title="Entrar" class="btn btn-primary">Entrar</a>';
 	echo '				</div>';
 	echo '				<div class="links">';
 	echo '					[ <a href="/">ainda não sou cadastrado</a> ]<br />[ <a href="/">esqueci minha senha</a> ]';
