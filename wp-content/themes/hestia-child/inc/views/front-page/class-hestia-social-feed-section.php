@@ -36,7 +36,7 @@ class Hestia_Social_Feed_Section extends Hestia_Abstract_Main {
 							</h2>
                         </div>
                     </div>
-					<?php echo do_shortcode('[ap_instagram_slider]'); ?>
+					<?php echo do_shortcode('[instagram-feed]'); ?>
 				</div>
 			</section>
 			<?php

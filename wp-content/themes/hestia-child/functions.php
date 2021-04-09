@@ -1,6 +1,6 @@
 <?php
 
-define('VERSION', '0.7.0');
+define('VERSION', '0.8.0');
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -135,4 +135,32 @@ function bt_blog(){
 	echo '</div>';
 }
 add_action( 'hestia_bottom_blog_section_content_hook', 'bt_blog' );
+
+/**
+ * Insere um botão para a página de posts
+ * logo abaixo da sessão Blog da página inicial
+ *
+ * @since 1.0.0
+ */
+function login_form(){
+	echo '<div id="ca-modal">';
+	echo '	<div class="ca-modal-container">';
+	echo '		<form id="ca-login-form">';
+	echo '			<div class="ca-login-form-content">';
+	echo '				<div class="input-group">
+							<input type="text" name="login" class="form-control" placeholder="Login" aria-describedby="Login">
+							<input type="password" name="senha" class="form-control" placeholder="Senha" aria-describedby="Login">
+		  				</div>';
+	echo '				<div class="btn-group btn-group-sm text-center">';
+	echo '					<a href="/blog" title="Entrar" class="btn btn-primary">Entrar</a>';
+	echo '				</div>';
+	echo '				<div class="links">';
+	echo '					[ <a href="/">ainda não sou cadastrado</a> ]<br />[ <a href="/">esqueci minha senha</a> ]';
+	echo '				</div>';
+	echo '			</div>';
+	echo '		</form>';
+	echo '	</div>';
+	echo '</div>';
+}
+add_action( 'hestia_after_footer_hook', 'login_form' );
 

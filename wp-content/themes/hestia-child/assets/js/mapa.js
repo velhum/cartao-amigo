@@ -8,7 +8,6 @@
 
     function pins() {
         let visivel = $('#location').visible(true, false, 'vertical');
-        console.log('visivel: ', visivel);
         // Verifica se a div #location está visível na viewport
         if( visivel ){
             /* Insere diversos PINs na sessão Location */

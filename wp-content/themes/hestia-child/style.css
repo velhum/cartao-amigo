@@ -5,7 +5,7 @@ Description: This is a custom child theme I have created.
 Author: ThemeIsle    
 URI: https://www.themeisle.com/    
 Template: hestia  
-Version: 0.7.0
+Version: 0.8.0
 */
 
 @font-face {
@@ -16,6 +16,12 @@ Version: 0.7.0
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --azul: #0d0540;
+  --laranja: #fd6925;
+}
+
 
 .main {
   max-width: 1770px;
@@ -68,11 +74,11 @@ h5,
 .woocommerce ul.products[class*="columns-"] li.product-category h2,
 .woocommerce ul.products[class*="columns-"] li.product-category h2 a,
 .woocommerce ul.products[class*="columns-"] li.product-category h2 a:hover {
-  color: #0d0540;
+  color: var(--azul);
 }
 
 .description {
-  color: #fd6925;
+  color: var(--laranja);
 }
 
 section.hestia-features {
@@ -92,6 +98,10 @@ section.hestia-about {
 
 section.hestia-about.section-image:after {
   background-color: transparent;
+}
+
+.home section {
+  padding: 44px 0 64px !important;
 }
 
 /* == TIPOGRAFIA == */
@@ -119,14 +129,6 @@ span.riscado {
   text-decoration: line-through;
 }
 
-/*
-.carousel h1.hestia-title span {
-  background: linear-gradient(to right, #ff6600, #ffd900);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-*/
-
 /* == Flex layout == */
 
 .fx-row {
@@ -151,7 +153,6 @@ span.riscado {
 
 nav.navbar-transparent div#main-navigation ul.nav.navbar-nav li a,
 nav.navbar-transparent div#main-navigation ul.nav.navbar-nav li a:hover {
-  color: #FFF;
   opacity: 1;
 }
 
@@ -160,7 +161,6 @@ nav.navbar-transparent div#main-navigation ul.nav.navbar-nav li a:hover {
 
 section.hestia-simulator {
   text-align: center;
-  padding: 75px 0;
 }
 
 .hestia-simulator .input-group {
@@ -286,7 +286,7 @@ section.hestia-simulator div.mais-ou-menos {
   height: 32px;
   border-radius: 32px;
   box-shadow:  2px 2px 0 rgb(253 105 37 / 14%), 0 3px 1px -2px rgb(253 105 37 / 20%), 0 1px 5px 0 rgb(253 105 37 / 12%);
-  background-color: #fd6925;
+  background-color: var(--laranja);
   color: #FFF;
   cursor: pointer;
   font-size: 28px;
@@ -360,7 +360,7 @@ section.hestia-location .container {
 }
 
 section.hestia-location h2 {
-  background-color: #fd6925;
+  background-color: var(--laranja);
   color: #fff;
   padding: 16px 32px;
   border-radius: 32px;
@@ -385,10 +385,6 @@ section.hestia-location h2 {
 
 /* == REGISTER == */
 
-section.hestia-register {
-  padding-bottom: 32px;
-}
-
 section.hestia-register h4.card-title {
   font-size: 24px;
   line-height: 30px;
@@ -397,7 +393,7 @@ section.hestia-register h4.card-title {
 }
 
 section.hestia-register p.preco {
-  color: #fd6925;
+  color: var(--laranja);
   padding: 0 12px;
   font-size: 28px;
   font-weight: bold;
@@ -434,13 +430,12 @@ section.hestia-register h3.description {
 /* == PARTNERS == */
 
 section.hestia-partners {
-  background-color: #0d0540;
-  padding: 32px 0;
+  background-color: var(--azul);
 }
 
 section.hestia-partners h2.hestia-title {
   text-align: center;
-  color: #fd6925;
+  color: var(--laranja);
 }
 
 section.hestia-partners .partners {
@@ -501,18 +496,67 @@ section.hestia-contact h4.card-title {
     margin-left: 5%;
     margin-right: 5%;
   }
+
 }
 
 /* Social Feed */
-
-.hestia-social-feed {
-  padding: 32px 0;
-}
 
 section.hestia-social-feed h2.hestia-title {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section.hestia-social-feed .sb_instagram_header {
+  display: none;
+}
+
+/* Login Form */
+
+form#ca-login-form {
+  display: none;
+  width: 300px;
+  z-index: 999999999;
+}
+
+.ca-login-form-content {
+  background-color: #FFF;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 16px;
+}
+
+.ca-login-form-content .btn-group.btn-group-sm a.btn.btn-primary {
+  padding: 7px 15px !important;
+  font-size: 14px;
+}
+
+.ca-login-form-content .links {
+  text-align: center;
+  padding-top: 16px;
+  color: var(--laranja);
+}
+
+#ca-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#ca-modal .ca-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 /* Somente para desenvolvimento */
