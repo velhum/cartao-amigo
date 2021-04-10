@@ -519,7 +519,7 @@ form#ca-login-form {
 
 .ca-login-form-content {
   background-color: #FFF;
-  padding: 16px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

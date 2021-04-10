@@ -22,34 +22,6 @@
     /* Blog */
     $('article.card.card-blog').attr('data-aos', 'fade-up');
 
-    /* Login form */
-    $('li.menu-item a[title="Login"], #ca-login-form .btn.btn-primary[title="Cancelar"]').on('click', () => {
-        const display = $('#ca-modal').css('display');
-        if (display == 'none') {
-            $('#ca-modal').css('display', 'block')
-            $('#ca-login-form').slideDown();        
-            // $('#ca-modal').show('fast', () => {
-            //     $('#ca-login-form').slideDown();        
-            // });
-        } else {
-            $('#ca-login-form').slideUp(() => {
-                $('#ca-modal').css('display','none');
-                // $('#ca-modal').hide('fast');
-            });        
-        }
-
-        if ( $( '.navbar .navbar-collapse' ).hasClass( 'in' ) ) {
-            $( '.navbar .navbar-collapse.in' ).removeClass( 'in' );
-        }
-
-        if ( $( 'body' ).hasClass( 'menu-open' ) ) {
-            $( 'body' ).removeClass( 'menu-open' );
-            $( '.navbar-collapse' ).css( 'height', '0' );
-            $( '.navbar-toggle' ).attr( 'aria-expanded', 'false' );
-        }
-
-    })
-
     AOS.init({
         easing: 'ease-in-out-sine',
         once: false,

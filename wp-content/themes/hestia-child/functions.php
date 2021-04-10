@@ -142,6 +142,7 @@ add_action( 'hestia_bottom_blog_section_content_hook', 'bt_blog' );
  *
  * @since 1.0.0
  */
+/*
 function login_form(){
 	echo '<div id="ca-modal">';
 	echo '	<div class="ca-modal-container">';
@@ -164,4 +165,4 @@ function login_form(){
 	echo '</div>';
 }
 add_action( 'hestia_after_footer_hook', 'login_form' );
-
+*/
