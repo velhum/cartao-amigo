@@ -1,5 +1,7 @@
 <?php
 
+require get_template_directory() . '-child/inc/customizer.php';
+
 define('VERSION', '0.8.2');
 
 if ( !defined( 'ABSPATH' ) ) exit;

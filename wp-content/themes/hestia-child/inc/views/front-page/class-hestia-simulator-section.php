@@ -33,7 +33,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 hestia-simulator-title-area">
-                            <h2 class="hestia-title">Pague somente o que usar!</h2>
+                            <h2 class="hestia-title"><?php echo get_theme_mod('set_simulator_title') ?></h2>
                         </div>
                     </div>
                     <div class="hestia-simulator-content">

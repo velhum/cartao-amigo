@@ -10,19 +10,20 @@
  * @since Hestia 1.0
  */
 
-require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-location-section.php');
+// require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-location-section.php');
+require get_template_directory() . '-child/inc/views/front-page/class-hestia-location-section.php';
 $location = new Hestia_Location_Section();
 
-require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-simulator-section.php');
+require get_template_directory() . '-child/inc/views/front-page/class-hestia-simulator-section.php';
 $simulator = new Hestia_Simulator_Section();
 
-require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-register-section.php');
+require get_template_directory() . '-child/inc/views/front-page/class-hestia-register-section.php';
 $register = new Hestia_Register_Section();
 
-require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-partners-section.php');
+require get_template_directory() . '-child/inc/views/front-page/class-hestia-partners-section.php';
 $partners = new Hestia_Partners_Section();
 
-require_once('wp-content/themes/hestia-child/inc/views/front-page/class-hestia-social-feed-section.php');
+require get_template_directory() . '-child/inc/views/front-page/class-hestia-social-feed-section.php';
 $socialFeed = new Hestia_Social_Feed_Section();
 
 $blog         = new Hestia_Blog_Section();
