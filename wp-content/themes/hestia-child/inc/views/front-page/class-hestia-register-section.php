@@ -46,10 +46,10 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                     <div class="col-md-7">
                                         <div class="content">
                                             <h4 class="card-title">Plano anual</h4>
-                                            <p class="preco">de <span class="riscado">R$ 249,00</span><br /> por R$ 149,00</p>
+                                            <p class="preco">de <span class="riscado">R$ 298,80</span><br /> por R$ 199,90*</p>
                                             <div class="buttons text-center">
                                                 <a href="/?p=69&plano=anual" title="Quero!" class="btn btn-primary">
-                                                    Quero! Só R$ 149,00/Ano
+                                                    Quero! Só R$ 199,90/Ano*
                                                 </a>
                                             </div>
                                         </div>
@@ -64,16 +64,21 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                     <div class="col-md-7">
                                         <div class="content">
                                             <h4 class="card-title">Plano mensal</h4>
-                                            <p class="preco">de <span class="riscado">R$ 24,90</span><br /> por R$ 14,90</p>
+                                            <p class="preco">de <span class="riscado">R$ 24,90</span><br /> por R$ 19,90*</p>
                                             <div class="buttons text-center">
                                                 <a href="/?p=69&plano=mensal" title="Quero!" class="btn btn-primary">
-                                                    Quero! Só R$ 14,90/Mês
+                                                    Quero! Só R$ 19,90/Mês*
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 16px;">
+                        <div class="col-md-12 text-center">
+                            *permite até 4 dependentes inteiramente grátis.
                         </div>
                     </div>
                     <div class="buttons text-center">

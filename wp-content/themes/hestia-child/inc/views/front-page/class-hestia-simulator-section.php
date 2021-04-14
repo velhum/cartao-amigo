@@ -33,7 +33,8 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 hestia-simulator-title-area">
-                            <h2 class="hestia-title"><?php echo get_theme_mod('set_simulator_title') ?></h2>
+                            <!-- <h2 class="hestia-title"><?php echo get_theme_mod('set_simulator_title') ?></h2> -->
+                            <h2 class="hestia-title">Pague apenas o que usar!</h2>
                         </div>
                     </div>
                     <div class="hestia-simulator-content">
@@ -42,7 +43,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                 <div class="hestia-info">
                                     <div class="hestia-info-bloco">
                                         <div class="icon" style="color:#4caf50">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                            <i class="fas fa-dollar-sign"></i>
                                         </div>
                                         <h4 class="info-title">Quanto você paga de plano de saúde?</h4>
                                         <div class="input-group fx-row">
@@ -56,11 +57,9 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                     </div>
                                     <div class="hestia-info-bloco">
-                                        <div class="icon varios" style="color:#4caf50">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <div class="icon" style="color:#4caf50">
+                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.gif' ?>"
+                                                alt="Animação com notas de dinheiro entrando na carteira">
                                         </div>
                                         <h4 class="info-title">Ou seja, você pagou por ano</h4>
                                         <div class="input-group fx-row">
@@ -75,7 +74,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-4 feature-box">
-                                <div class="hestia-info" style="justify-content: start">
+                                <div class="hestia-info hestia-info-bloco" style="justify-content: start">
                                     <div class="icon" style="color:#F00">
                                         <i class="fas fa-briefcase-medical"></i>
                                     </div>
@@ -148,11 +147,9 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                     </div>
                                     <div class="hestia-info-bloco">
-                                        <div class="icon varios">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/real-bills.png' ?>" alt="Notas de Real">
+                                        <div class="icon">
+                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/money-wallet.gif' ?>"
+                                                alt="Animação com nota de dinheiro voando">
                                         </div>
                                         <h4 class="info-title">Dinheiro desperdiçado</h4>
                                         <div class="input-group fx-row">

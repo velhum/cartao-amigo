@@ -1,7 +1,9 @@
 (function($){
 
     console.log('Simulador!'); 
-    const anuidadeCartaoAmigo = 149; // Anuidade do Cartão Amigo
+
+    const anuidadeCartaoAmigo = 199.9; // Anuidade do Cartão Amigo
+
     $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(parseFloat(anuidadeCartaoAmigo)));
 
     $('#mensalidade, #anuidade, #diferenca').val('0,00');

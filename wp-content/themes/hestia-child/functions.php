@@ -2,7 +2,7 @@
 
 require get_template_directory() . '-child/inc/customizer.php';
 
-define('VERSION', '0.8.2');
+define('VERSION', '0.8.4');
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -22,7 +22,7 @@ if ( !function_exists( 'hestia_child_parent_css' ) ):
 				VERSION
 			);
 		}
-		wp_enqueue_style( 'aos-style', get_stylesheet_directory_uri() . '/assets/css/aos.css', array() );
+		wp_enqueue_style( 'aos-style', get_stylesheet_directory_uri() . '/assets/css/aos.css', array(), VERSION );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'hestia_child_parent_css', 10 );
@@ -108,6 +108,25 @@ function my_custom_scripts() {
 			true  // Carregar ao final (antes de </body>)
 		);
 	}
+
+	
+	if( is_page('cadastro') ){
+		// wp_enqueue_script(
+		// 	'jquery-validation',
+		// 	'http://jqueryvalidation.org/files/dist/jquery.validate.js',
+		// 	array( 'jquery' ), // Dependências
+		// 	VERSION, // incluir número da versão
+		// 	true  // Carregar ao final (antes de </body>)
+		// );
+		wp_enqueue_script(
+			'associes-se',
+			get_stylesheet_directory_uri() . '/assets/js/associe-se.js',
+			array( 'jquery' ), // Dependências
+			VERSION, // incluir número da versão
+			true  // Carregar ao final (antes de </body>)
+		);
+	}
+	
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
@@ -138,33 +157,12 @@ function bt_blog(){
 }
 add_action( 'hestia_bottom_blog_section_content_hook', 'bt_blog' );
 
-/**
- * Insere um botão para a página de posts
- * logo abaixo da sessão Blog da página inicial
- *
- * @since 1.0.0
- */
-/*
-function login_form(){
-	echo '<div id="ca-modal">';
-	echo '	<div class="ca-modal-container">';
-	echo '		<form id="ca-login-form">';
-	echo '			<div class="ca-login-form-content">';
-	echo '				<div class="input-group">
-							<input type="text" name="login" class="form-control" placeholder="Login" aria-describedby="Login">
-							<input type="password" name="senha" class="form-control" placeholder="Senha" aria-describedby="Login">
-		  				</div>';
-	echo '				<div class="btn-group btn-group-sm text-center">';
-	echo '					<a href="#" title="Cancelar" class="btn btn-primary">Cancelar</a>';
-	echo '					<a href="#" title="Entrar" class="btn btn-primary">Entrar</a>';
-	echo '				</div>';
-	echo '				<div class="links">';
-	echo '					[ <a href="/">ainda não sou cadastrado</a> ]<br />[ <a href="/">esqueci minha senha</a> ]';
-	echo '				</div>';
-	echo '			</div>';
-	echo '		</form>';
-	echo '	</div>';
-	echo '</div>';
+/* CSS Loading */
+
+function carregaEstiloLoading(){
+	wp_enqueue_style( 'loading-style', get_stylesheet_directory_uri() . '/assets/css/loading.css', array(), VERSION );
 }
-add_action( 'hestia_after_footer_hook', 'login_form' );
-*/
+
+add_action( 'wp_enqueue_scripts', 'carregaEstiloLoading', 10 );
+
+

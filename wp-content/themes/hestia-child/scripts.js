@@ -8,7 +8,7 @@
         $('.hestia-simulator-content .hestia-info').attr('data-aos', 'zoom-in-up');
         
         /* Location */
-        $('.hestia-location-content h2').attr('data-aos', 'flip-left');
+        // $('.hestia-location-content h2').attr('data-aos', 'flip-left');
         
         /* ? */
         $('.card.card-profile.card-plain').attr('data-aos', 'flip-right');
