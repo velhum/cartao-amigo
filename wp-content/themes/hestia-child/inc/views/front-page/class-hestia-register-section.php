@@ -64,7 +64,7 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                     <div class="col-md-7">
                                         <div class="content">
                                             <h4 class="card-title">Plano mensal</h4>
-                                            <p class="preco">de <span class="riscado">R$ 24,90</span><br /> por R$ 19,90*</p>
+                                            <p class="preco">de <span class="riscado">R$ 29,90</span><br /> por R$ 19,90*</p>
                                             <div class="buttons text-center">
                                                 <a href="/?p=69&plano=mensal" title="Quero!" class="btn btn-primary">
                                                     Quero! Só R$ 19,90/Mês*

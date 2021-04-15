@@ -1,59 +1,53 @@
 (function($){
 
-    console.log('Simulador!'); 
-
     const anuidadeCartaoAmigo = 199.9; // Anuidade do Cartão Amigo
 
-    $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(parseFloat(anuidadeCartaoAmigo)));
+    $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(anuidadeCartaoAmigo));
 
-    $('#mensalidade, #anuidade, #diferenca').val('0,00');
+    $('#mensalidade, #anuidade, #diferenca').val('R$ 0,00');
     
     $('#mensalidade').on('focus', () => {
         $('#mensalidade').val('');
-        $('#diferenca, #anuidade, #gasto-cartao-amigo').val('0,00');
+        $('#diferenca, #anuidade, #gasto-cartao-amigo').val('R$ 0,00');
     });
 
     $('#mensalidade').on('keyup', executaCalculos);
 
     $('.procedimentos .procedimento .quantidade, .hestia-simulator #mensalidade').on('change', executaCalculos);
 
-    function formatReal( int ) {
-        int = int * 100
-        let tmp = int+'';
-        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-        if( tmp.length > 6 )
-                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-        return tmp;
+    /*
+    ** Recebe um valor float
+    ** Retorna o valor formatado 1.199,90
+    */
+
+    function formatReal( valor ) {
+        return valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     }
 
     function executaCalculos() {
-        let mensalidade = $('.hestia-simulator #mensalidade').val()
+        let mensalidade = $('.hestia-simulator #mensalidade').val();
         mensalidade = mensalidade ? parseFloat(mensalidade.replace('.', '').replace(',', '.')) : 0;
         let totalDeServicos = 0;
         let diferenca = 0;
         let procedimentos = $('.procedimentos .procedimento');
         let anuidadePlanoSaude = mensalidade * 12;
-
+        
         let gastoCartaoAmigo = anuidadeCartaoAmigo // Anuidade do CA + Total de serviços
-
+        
         for (let item of procedimentos) {
             totalDeServicos += parseFloat($(item).find('.descricao').data('valor')) * $(item).find('.quantidade').val() ;
-            gastoCartaoAmigo = anuidadeCartaoAmigo + totalDeServicos;
         }
+        
+        gastoCartaoAmigo = anuidadeCartaoAmigo + totalDeServicos;
         
         diferenca = anuidadePlanoSaude - totalDeServicos;
 
-        $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(parseFloat(gastoCartaoAmigo)));
+        $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(gastoCartaoAmigo));
 
-        if ( parseInt(mensalidade) !== 0){
+        if ( mensalidade !== 0){
             $('.hestia-simulator #anuidade').val(formatReal(anuidadePlanoSaude));
             $('.hestia-simulator #diferenca').val(
-                diferenca > 0
-                ? formatReal((Math.round(diferenca) / 100)
-                    .toFixed(2)
-                    .toString()
-                    .replace('.', ''))
-                : "0,00"
+                diferenca > 0 ? formatReal(diferenca) : "R$ 0,00"
             );
         }
 

@@ -63,7 +63,6 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                         <h4 class="info-title">Ou seja, você pagou por ano</h4>
                                         <div class="input-group fx-row">
-                                            <span class="input-group-addon">R$</span>
                                             <input id="anuidade"
                                                 type="text"
                                                 class="form-control dinheiro fx-grow"
@@ -139,7 +138,6 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                         <h4 class="info-title">Se você tivesse o Cartão Amigo, o seu custo anual de Saúde seria</h4>
                                         <div class="input-group fx-row">
-                                            <span class="input-group-addon">R$</span>
                                             <input id="gasto-cartao-amigo"
                                                 type="text"
                                                 class="form-control dinheiro fx-grow"
@@ -153,7 +151,6 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                         <h4 class="info-title">Dinheiro desperdiçado</h4>
                                         <div class="input-group fx-row">
-                                            <span class="input-group-addon">R$</span>
                                             <input id="diferenca"
                                                 type="text"
                                                 class="form-control dinheiro fx-grow"
