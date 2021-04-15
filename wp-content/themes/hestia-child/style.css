@@ -3,7 +3,7 @@ Theme Name: Cartão Amigo
 Description: Tema filho para o Hestia, desenvolvido para o Cartão Amigo    
 Author: Paulo Ellery    
 Template: hestia  
-Version: 0.8.4
+Version: 0.9.0
 */
 
 @font-face {
@@ -195,7 +195,7 @@ section.hestia-simulator {
   align-items: center;
   font-size: 18px;
   border-bottom: 1px solid #ccc;
-  margin: 6px 0;
+  margin: 16px 6px;
 }
 
 .hestia-simulator ul.procedimentos li.procedimento .quantidade {

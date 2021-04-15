@@ -2,7 +2,7 @@
 
 require get_template_directory() . '-child/inc/customizer.php';
 
-define('VERSION', '0.8.4');
+define('VERSION', '0.9.0');
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -22,7 +22,6 @@ if ( !function_exists( 'hestia_child_parent_css' ) ):
 				VERSION
 			);
 		}
-		wp_enqueue_style( 'aos-style', get_stylesheet_directory_uri() . '/assets/css/aos.css', array(), VERSION );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'hestia_child_parent_css', 10 );
@@ -52,14 +51,6 @@ function my_custom_scripts() {
     wp_enqueue_script(
 		'jquery-mask',
 		get_stylesheet_directory_uri() . '/assets/js/jquery.mask.js',
-		array( 'jquery' ), // Dependências
-		VERSION, // incluir número da versão
-		true  // Carregar ao final (antes de </body>)
-	);
-
-    wp_enqueue_script(
-		'aos-js',
-		get_stylesheet_directory_uri() . '/assets/js/aos.js',
 		array( 'jquery' ), // Dependências
 		VERSION, // incluir número da versão
 		true  // Carregar ao final (antes de </body>)

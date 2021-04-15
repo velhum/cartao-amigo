@@ -39,7 +39,7 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                     <div class="hestia-register-content">
                         <div class="row">
                             <div class="col-xs-12 col-ms-6 col-sm-6">
-                                <div class="card card-profile card-plain" data-aos="flip-right">
+                                <div class="card card-profile card-plain">
                                     <div class="col-md-5">
                                         <div class="card-image"><img class="img" src="<?php echo get_template_directory_uri() . '-child/assets/images/card-in-pocket.png' ?>" alt="Um plano que cabe no seu bolso" title="Um plano que cabe no seu bolso"></div>
                                     </div>
@@ -57,7 +57,7 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                 </div>
                             </div>
                             <div class="col-xs-12 col-ms-6 col-sm-6">
-                                <div class="card card-profile card-plain" data-aos="flip-right">
+                                <div class="card card-profile card-plain">
                                     <div class="col-md-5">
                                         <div class="card-image"><img class="img" src="<?php echo get_template_directory_uri() . '-child/assets/images/medical-doctor.png' ?>" alt="Médico fazendo anotações" title="Médico fazendo anotações"></div>
                                     </div>

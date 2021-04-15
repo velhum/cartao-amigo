@@ -38,31 +38,31 @@ class Hestia_Partners_Section extends Hestia_Abstract_Main
                     </div>
                     <div class="hestia-partners-content">
                         <div class="partners">
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 1
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 2
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 3
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 4
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 5
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 6
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 7
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 8
                             </div>
-                            <div class="partner" data-aos="flip-down">
+                            <div class="partner">
                                 Parceiro 9
                             </div>
                         </div>

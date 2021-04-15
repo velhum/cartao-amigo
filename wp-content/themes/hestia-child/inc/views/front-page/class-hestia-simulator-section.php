@@ -57,7 +57,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                     </div>
                                     <div class="hestia-info-bloco">
-                                        <div class="icon" style="color:#4caf50">
+                                        <div class="icon">
                                             <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.gif' ?>"
                                                 alt="Animação com notas de dinheiro entrando na carteira">
                                         </div>
@@ -133,7 +133,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                             <div class="col-xs-12 col-md-4 feature-box">
                                 <div class="hestia-info resultado">
                                     <div class="hestia-info-bloco">
-                                        <div class="icon" style="color:#fd6925">
+                                        <div class="icon" style="color:#42A5F5">
                                             <i class="far fa-smile-beam"></i>
                                         </div>
                                         <h4 class="info-title">Se você tivesse o Cartão Amigo, o seu custo anual de Saúde seria</h4>
