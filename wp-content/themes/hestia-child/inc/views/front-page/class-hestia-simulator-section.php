@@ -47,7 +47,6 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                         </div>
                                         <h4 class="info-title">Quanto você paga de plano de saúde?</h4>
                                         <div class="input-group fx-row">
-                                            <span class="input-group-addon">R$</span>
                                             <input id="mensalidade"
                                                 type="text"
                                                 class="form-control dinheiro fx-grow"
