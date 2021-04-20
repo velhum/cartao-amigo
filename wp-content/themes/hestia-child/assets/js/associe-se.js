@@ -9,5 +9,5 @@
         $('.ca-loading').hide();
     });
     
-})(jQuery)
+})(jQuery);
 

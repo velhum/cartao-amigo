@@ -7,6 +7,9 @@ wp-*.php
 /readme.html
 /xmlrpc.php
 
+# ignore dist directory
+dist/
+
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
