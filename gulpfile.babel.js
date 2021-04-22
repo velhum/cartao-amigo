@@ -35,7 +35,7 @@ const server = browserSync.create();
 
 export const serve = done => {
   server.init({
-    proxy: "http://localhost:8888/cartao-amigo"
+    proxy: "http://localhost:8888/cartao-amigo/"
   });
   done();
 };
@@ -62,13 +62,13 @@ export const reload = done => {
 */
 
 export const styles = () => {
-  return src('src/assets/scss/bundle.scss')
+  return src('src/assets/scss/style.scss')
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest('../hestia-child/assets/css'))
+    .pipe(dest(`../${info.theme_directory}/`))
     .pipe(server.stream()); // injeta o CSS alterado sem precisar recarregar o site
 }
 
@@ -101,7 +101,7 @@ export const scripts = () => {
       jquery: 'jQuery'
     },
   }))
-  .pipe(dest('../hestia-child/assets/js'));
+  .pipe(dest(`../${info.theme_directory}/assets/js`));
 }
 
 /*
@@ -111,17 +111,17 @@ export const scripts = () => {
 export const images = () => {
   return src('src/assets/images/**/*.{jpg,jpeg,png,svg}')
     .pipe(gulpif(PRODUCTION, imagemin()))
-    .pipe(dest('../hestia-child/assets/images'));
+    .pipe(dest(`../${info.theme_directory}/assets/images`));
 }
 
 /*
-** Apaga toda a pasta ../hestia-child
+** Apaga toda a pasta ../${info.theme_directory}
 */
 
-export const clean = () => del(['../hestia-child']);
+export const clean = () => del([`../${info.theme_directory}`], { force: true });
 
 /*
-** Copia os arquivos das pasta /src para a pasta ../hestia-child
+** Copia os arquivos das pasta /src para a pasta ../${info.theme_directory}
 */
 
 export const copy = () => {
@@ -130,11 +130,22 @@ export const copy = () => {
       ,'!src/assets/{images,js,scss}'
       ,'!src/assets/{images,js,scss}/**/*'
     ])
-    .pipe(dest('../hestia-child'));
+    .pipe(dest(`../${info.theme_directory}`));
 }
 
 /*
-** Copia os arquivos das pasta /src para a pasta ../hestia-child
+** Copia os arquivos .GIF (que não são tratados pelo imagemin) para a pasta ../${info.theme_directory}
+*/
+
+export const copyGif = () => {
+  return src([
+       'src/**/*.gif'
+    ])
+    .pipe(dest(`../${info.theme_directory}`));
+}
+
+/*
+** Copia os arquivos das pasta /src para a pasta ../${info.theme_directory}
 */
 
 export const copyJquery = () => {
@@ -142,7 +153,7 @@ export const copyJquery = () => {
         'src/assets/js/jquery.mask.js'
        ,'src/assets/js/jquery.visible.min.js'
     ])
-    .pipe(dest('../hestia-child/assets/js'));
+    .pipe(dest(`../${info.theme_directory}/assets/js`));
 }
 
 /*
@@ -151,20 +162,21 @@ export const copyJquery = () => {
 
 export const compress = () => {
   return src([
-    "**/*",
-    "!node_modules{,/**}",
-    "!bundled{,/**}",
-    "!src{,/**}",
-    "!.babelrc",
-    "!.gitignore",
-    "!gulpfile.babel.js",
-    "!package.json",
-    "!package-lock.json",
+    `../${info.theme_directory}/**/*`,
+    // "!node_modules{,/**}",
+    // "!bundled{,/**}",
+    // "!src{,/**}",
+    // "!.babelrc",
+    // "!.gitignore",
+    // "!gulpfile.babel.js",
+    // "!package.json",
+    // "!package-lock.json",
     ".DS_Store",
     "__MACOSX"
     ], { "allowEmpty": true })
-    .pipe(replace("_themename", info.name))
-    .pipe(zip(`${info.name}.zip`))
+    .pipe(replace("_themename", info.theme_name))
+    .pipe(replace("_themeversion", info.version))
+    .pipe(zip(`${info.theme_directory}.zip`))
     .pipe(dest('bundled'));
   };
 
@@ -175,7 +187,7 @@ export const compress = () => {
 
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', styles);
-  watch('src/images/**/*.{jpg,jpeg,png,svg}', series(images, reload));
+  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, copyGif, reload));
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
@@ -188,6 +200,7 @@ export const dev = series(
                         , images
                         , copy
                         , copyJquery
+                        , copyGif
                         , scripts)
                     , watchForChanges
                     , serve);
@@ -199,6 +212,7 @@ export const build = series(
                           , images
                           , copy
                           , copyJquery
+                          , copyGif
                           , scripts)
                       , compress);
 export default dev;
