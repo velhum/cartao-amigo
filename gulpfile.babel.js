@@ -68,7 +68,7 @@ export const styles = () => {
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest('hestia-child/assets/css'))
+    .pipe(dest('../hestia-child/assets/css'))
     .pipe(server.stream()); // injeta o CSS alterado sem precisar recarregar o site
 }
 
@@ -101,7 +101,7 @@ export const scripts = () => {
       jquery: 'jQuery'
     },
   }))
-  .pipe(dest('hestia-child/assets/js'));
+  .pipe(dest('../hestia-child/assets/js'));
 }
 
 /*
@@ -111,17 +111,17 @@ export const scripts = () => {
 export const images = () => {
   return src('src/assets/images/**/*.{jpg,jpeg,png,svg}')
     .pipe(gulpif(PRODUCTION, imagemin()))
-    .pipe(dest('hestia-child/assets/images'));
+    .pipe(dest('../hestia-child/assets/images'));
 }
 
 /*
-** Apaga toda a pasta /hestia-child
+** Apaga toda a pasta ../hestia-child
 */
 
-export const clean = () => del(['hestia-child']);
+export const clean = () => del(['../hestia-child']);
 
 /*
-** Copia os arquivos das pasta /src para a pasta /hestia-child
+** Copia os arquivos das pasta /src para a pasta ../hestia-child
 */
 
 export const copy = () => {
@@ -130,11 +130,11 @@ export const copy = () => {
       ,'!src/assets/{images,js,scss}'
       ,'!src/assets/{images,js,scss}/**/*'
     ])
-    .pipe(dest('hestia-child'));
+    .pipe(dest('../hestia-child'));
 }
 
 /*
-** Copia os arquivos das pasta /src para a pasta /hestia-child
+** Copia os arquivos das pasta /src para a pasta ../hestia-child
 */
 
 export const copyJquery = () => {
@@ -142,7 +142,7 @@ export const copyJquery = () => {
         'src/assets/js/jquery.mask.js'
        ,'src/assets/js/jquery.visible.min.js'
     ])
-    .pipe(dest('hestia-child/assets/js'));
+    .pipe(dest('../hestia-child/assets/js'));
 }
 
 /*
