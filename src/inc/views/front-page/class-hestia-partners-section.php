@@ -39,31 +39,44 @@ class Hestia_Partners_Section extends Hestia_Abstract_Main
                     <div class="hestia-partners-content">
                         <div class="partners">
                             <div class="partner">
-                                Parceiro 1
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-cch.png' ?>"
+                                    alt="Centro Clínico Humana"/>
                             </div>
                             <div class="partner">
-                                Parceiro 2
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-clinica-da-mama.png' ?>"
+                                    alt="Clínica da Mama"/>
                             </div>
                             <div class="partner">
-                                Parceiro 3
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-clinica-semear-saude.png' ?>"
+                                    alt="Clínica Semear Saúde"/>
                             </div>
                             <div class="partner">
-                                Parceiro 4
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-imeb.png' ?>"
+                                    alt="IMEB"/>
                             </div>
                             <div class="partner">
-                                Parceiro 5
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-med-brasilia.png' ?>"
+                                    alt="Med Brasília"/>
                             </div>
                             <div class="partner">
-                                Parceiro 6
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-med-garden.png' ?>"
+                                    alt="Med Garden"/>
                             </div>
                             <div class="partner">
-                                Parceiro 7
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-nucleos.png' ?>"
+                                    alt="Núcleos"/>
                             </div>
                             <div class="partner">
-                                Parceiro 8
-                            </div>
-                            <div class="partner">
-                                Parceiro 9
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-sabin.png' ?>"
+                                    alt="Sabin"/>
                             </div>
                         </div>
                     </div>
