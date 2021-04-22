@@ -1,5 +1,7 @@
 (function($){
 
+    console.log('mapa');
+
     const larguraLocation = $('.hestia-location .container').width();
     const alturaLocation = $('.hestia-location .container').height();
     let intervalo = null;

@@ -1,5 +1,7 @@
 (function($){
 
+    console.log('Simulator');
+
     const anuidadeCartaoAmigo = 199.9; // Anuidade do Cartão Amigo
 
     $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(anuidadeCartaoAmigo));

@@ -1,9 +1,10 @@
 {
-  "name": "cartao-amigo",
+  "name": "hestia-child",
   "version": "1.0.0",
-  "description": "Tema Wordpress para o site do Cartão Amigo",
+  "description": "Tema Wordpress para o site do Cartão Amigo, criado como 'filho' do tema Hestia",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build --prod"
   },
   "repository": {
     "type": "git",
@@ -28,12 +29,19 @@
     "@babel/preset-env": "^7.13.15",
     "@babel/register": "^7.13.16",
     "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-zip": "^5.1.0",
+    "webpack-stream": "^6.1.2",
     "yargs": "^16.2.0"
   }
 }

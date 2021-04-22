@@ -1,6 +1,7 @@
 # ignore node dependency directories
 node_modules/
-dist/
+hestia-child/
+bundled/
 
 # ignore log files and databases
 *.log
