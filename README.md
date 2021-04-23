@@ -26,5 +26,6 @@ Tema Wordpress para o site do Cartão Amigo
 | Browser-Sync | Recarrega o site toda vez que uma tarefa termina |
 | Gulp_Zip | Compacta os arquivos do tema |
 | Gulp-Replace | Substitui strings nos arquivos | 
+| Gulp-Concat | Concatena arquivos texto |
 
 Fonte: https://css-tricks.com/gulp-for-wordpress-creating-the-tasks/

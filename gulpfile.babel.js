@@ -13,6 +13,7 @@ import {
 import autoprefixer from 'autoprefixer';
 import browserSync from "browser-sync";
 import cleanCss from 'gulp-clean-css';
+import concatCss from 'gulp-concat';
 import del from 'del';
 import gulpif from 'gulp-if';
 import imagemin from 'gulp-imagemin';
@@ -157,6 +158,20 @@ export const copyJquery = () => {
 }
 
 /*
+** Concatena o arquivo header.css com o arquivo minimizado styles.css
+*/
+
+export const concat = () => {
+  return src([
+        `../${info.theme_directory}/header.css`
+      , `../${info.theme_directory}/style.css`])
+    .pipe(concatCss(
+      `../${info.theme_directory}/style.css`
+      ))
+    .pipe(dest(`../${info.theme_directory}/`));
+}
+
+/*
 ** Gera o arquivo .ZIP do tema
 */
 
@@ -214,5 +229,6 @@ export const build = series(
                           , copyJquery
                           , copyGif
                           , scripts)
+                      , concat
                       , compress);
 export default dev;
