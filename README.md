@@ -2,10 +2,10 @@
 Tema Wordpress para o site do Cartão Amigo
 
 # Ao desenvolver
-* clonar o repositório dentro da pasta 'wp-content/themes'
+* clonar o repositório dentro da pasta raiz do Wordpress
 * `npm install`
 * `npm start`
-* Para exportar o tema `npm build`
+* Para exportar o tema `npm build` (um arquivo .zip com o tema será criado na pasta 'bundled')
 
 ## Pacotes utilizados
 | Pacote | Descrição |
@@ -17,8 +17,8 @@ Tema Wordpress para o site do Cartão Amigo
 | Gulp-Clean-Css | Minifica os arquivos .css |
 | Gulp-If | Permite executar ações baseadas em uma condição (if --prod == true) |
 | Gulp-SourceMaps | Para os 'source maps' de minificação |
-| Gulp-PostCSS | Para que o AutoPrefixer funcione |
 | AutoPrefixer | Para inserir os prefixos específicos de navegadores (-webkit, -moz, etc)|
+| Gulp-PostCSS | Para que o AutoPrefixer funcione |
 | Gulp-Imagemin | Otimização de imagens |
 | Del | Apaga diretório |
 | Webpack-Stream | Empacotamento (bundle) |
