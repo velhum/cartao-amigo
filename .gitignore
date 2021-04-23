@@ -1,29 +1,7 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
-wp-admin/
-wp-includes/
-wp-*.php
-/index.php
-/readme.html
-/xmlrpc.php
-
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/themes/
-
-# ignore these plugins
-# wp-content/plugins/akismet/
-
-# ignore specific themes
-wp-content/themes/twenty*/
-wp-content/themes/hestia/
-wp-content/themes/index.php
-
 # ignore node dependency directories
 node_modules/
 hestia-child/
+bundled/
 
 # ignore log files and databases
 *.log
