@@ -57,7 +57,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     </div>
                                     <div class="hestia-info-bloco">
                                         <div class="icon">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.gif' ?>"
+                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/money-wallet.gif' ?>"
                                                 alt="Animação com notas de dinheiro entrando na carteira">
                                         </div>
                                         <h4 class="info-title">Ou seja, você pagou por ano</h4>
@@ -145,7 +145,7 @@ class Hestia_Simulator_Section extends Hestia_Abstract_Main
                                     </div>
                                     <div class="hestia-info-bloco">
                                         <div class="icon">
-                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/money-wallet.gif' ?>"
+                                            <img src="<?php echo get_template_directory_uri() . '-child/assets/images/flying-money.gif' ?>"
                                                 alt="Animação com nota de dinheiro voando">
                                         </div>
                                         <h4 class="info-title">Dinheiro desperdiçado</h4>

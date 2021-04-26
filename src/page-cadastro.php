@@ -52,6 +52,13 @@ do_action( 'hestia_before_index_wrapper' ); ?>
 			</div>
 		</div>
 	</div>
+	<script>
+		(function($){
+			$('#formCadastro').on( 'load', function() {
+				$('.ca-loading').hide();
+			} );
+}		)(jQuery)
+	</script>
 	<?php do_action( 'hestia_after_archive_content' ); ?>
 
 <?php get_footer(); ?>

@@ -1,8 +1,8 @@
 {
   "name": "cartao-amigo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tema Wordpress para o site do Cartão Amigo, criado como 'filho' do tema Hestia",
-  "theme_directory": "../wp-content/themes/hestia-child",
+  "theme_directory": "hestia-child",
   "theme_name": "hestia_child",
   "scripts": {
     "start": "gulp",

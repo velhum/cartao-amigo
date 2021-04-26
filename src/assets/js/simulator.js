@@ -42,7 +42,7 @@
         
         gastoCartaoAmigo = anuidadeCartaoAmigo + totalDeServicos;
         
-        diferenca = anuidadePlanoSaude - totalDeServicos;
+        diferenca = anuidadePlanoSaude - gastoCartaoAmigo;
 
         $('.hestia-simulator #gasto-cartao-amigo').val(formatReal(gastoCartaoAmigo));
 

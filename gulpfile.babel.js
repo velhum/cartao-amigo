@@ -13,7 +13,7 @@ import {
 import autoprefixer from 'autoprefixer';
 import browserSync from "browser-sync";
 import cleanCss from 'gulp-clean-css';
-import concatCss from 'gulp-concat';
+import concat from 'gulp-concat';
 import del from 'del';
 import gulpif from 'gulp-if';
 import imagemin from 'gulp-imagemin';
@@ -36,7 +36,7 @@ const server = browserSync.create();
 
 export const serve = done => {
   server.init({
-    proxy: "http://localhost:8888/cartao-amigo/"
+    proxy: "http://localhost:8888/wordpress/"
   });
   done();
 };
@@ -69,7 +69,7 @@ export const styles = () => {
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest(`${info.theme_directory}/`))
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}/`))
     .pipe(server.stream()); // injeta o CSS alterado sem precisar recarregar o site
 }
 
@@ -102,7 +102,7 @@ export const scripts = () => {
       jquery: 'jQuery'
     },
   }))
-  .pipe(dest(`${info.theme_directory}/assets/js`));
+  .pipe(dest(`../wp-content/themes/${info.theme_directory}/assets/js`));
 }
 
 /*
@@ -112,17 +112,17 @@ export const scripts = () => {
 export const images = () => {
   return src('src/assets/images/**/*.{jpg,jpeg,png,svg}')
     .pipe(gulpif(PRODUCTION, imagemin()))
-    .pipe(dest(`${info.theme_directory}/assets/images`));
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}/assets/images`));
 }
 
 /*
-** Apaga toda a pasta ${info.theme_directory}
+** Apaga toda a pasta ../wp-content/themes/${info.theme_directory}
 */
 
-export const clean = () => del([`${info.theme_directory}`], { force: true });
+export const clean = () => del([`../wp-content/themes/${info.theme_directory}`], { force: true });
 
 /*
-** Copia os arquivos das pasta /src para a pasta ${info.theme_directory}
+** Copia os arquivos das pasta /src para a pasta ../wp-content/themes/${info.theme_directory}
 */
 
 export const copy = () => {
@@ -131,22 +131,22 @@ export const copy = () => {
       ,'!src/assets/{images,js,scss}'
       ,'!src/assets/{images,js,scss}/**/*'
     ])
-    .pipe(dest(`${info.theme_directory}`));
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}`));
 }
 
 /*
-** Copia os arquivos .GIF (que não são tratados pelo imagemin) para a pasta ${info.theme_directory}
+** Copia os arquivos .GIF (que não são tratados pelo imagemin) para a pasta ../wp-content/themes/${info.theme_directory}
 */
 
 export const copyGif = () => {
   return src([
        'src/**/*.gif'
     ])
-    .pipe(dest(`${info.theme_directory}`));
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}`));
 }
 
 /*
-** Copia os arquivos das pasta /src para a pasta ${info.theme_directory}
+** Copia os arquivos das pasta /src para a pasta ../wp-content/themes/${info.theme_directory}
 */
 
 export const copyJquery = () => {
@@ -154,21 +154,27 @@ export const copyJquery = () => {
         'src/assets/js/jquery.mask.js'
        ,'src/assets/js/jquery.visible.min.js'
     ])
-    .pipe(dest(`${info.theme_directory}/assets/js`));
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}/assets/js`));
 }
 
 /*
 ** Concatena o arquivo header.css com o arquivo minimizado styles.css
 */
 
-export const concat = () => {
+export const concatCssHeader = () => {
+  console.log(`
+    Concatenando arquivos 
+    ../wp-content/themes/${info.theme_directory}/header.css e 
+    ../wp-content/themes/${info.theme_directory}/style.css
+  `);
   return src([
-        `${info.theme_directory}/header.css`
-      , `${info.theme_directory}/style.css`])
-    .pipe(concatCss(
-      `${info.theme_directory}/style.css`
+        `../wp-content/themes/${info.theme_directory}/header.css`
+      , `../wp-content/themes/${info.theme_directory}/style.css`
+    ], { "allowEmpty": true })
+    .pipe(concat(
+      'style.css'
       ))
-    .pipe(dest(`${info.theme_directory}/`));
+    .pipe(dest(`../wp-content/themes/${info.theme_directory}/`));
 }
 
 /*
@@ -177,7 +183,7 @@ export const concat = () => {
 
 export const compress = () => {
   return src([
-    `${info.theme_directory}/**/*`,
+    `../wp-content/themes/${info.theme_directory}/**/*`,
     // "!node_modules{,/**}",
     // "!bundled{,/**}",
     // "!src{,/**}",
@@ -186,8 +192,8 @@ export const compress = () => {
     // "!gulpfile.babel.js",
     // "!package.json",
     // "!package-lock.json",
-    ".DS_Store",
-    "__MACOSX"
+    "!.DS_Store",
+    "!__MACOSX"
     ], { "allowEmpty": true })
     .pipe(replace("_themename", info.theme_name))
     .pipe(replace("_themeversion", info.version))
@@ -201,10 +207,10 @@ export const compress = () => {
 */
 
 export const watchForChanges = () => {
-  watch('src/scss/**/*.scss', styles);
-  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, copyGif, reload));
+  watch('src/assets/scss/**/*.scss', styles);
+  watch('src/assets/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, copyGif, reload));
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
-  watch('src/js/**/*.js', series(scripts, reload));
+  watch('src/assets/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
 }
 
@@ -217,8 +223,9 @@ export const dev = series(
                         , copyJquery
                         , copyGif
                         , scripts)
-                    , watchForChanges
-                    , serve);
+                        , serve
+                        , watchForChanges
+                    );
 
 export const build = series(
                       clean
@@ -229,6 +236,6 @@ export const build = series(
                           , copyJquery
                           , copyGif
                           , scripts)
-                      , concat
+                      , concatCssHeader
                       , compress);
 export default dev;
