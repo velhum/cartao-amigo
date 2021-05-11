@@ -5,7 +5,7 @@ Tema Wordpress para o site do Cartão Amigo
 * clonar o repositório dentro da pasta raiz do Wordpress
 * `npm install`
 * `npm start`
-* Para exportar o tema `npm build` (um arquivo .zip com o tema será criado na pasta 'bundled')
+* Para exportar o tema `npm run build` (um arquivo .zip com o tema será criado na pasta 'bundled')
 
 ## Pacotes utilizados
 | Pacote | Descrição |
