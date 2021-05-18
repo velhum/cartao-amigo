@@ -28,6 +28,10 @@
     overflow: hidden;
 }
 
+.header-filter {
+    background-image: url('./assets/images/hand-holding-card.jpg') !important;
+}
+
 body:not(.home) .header-filter {
     background-position: center -73px;
 }
@@ -80,10 +84,13 @@ section.hestia-contact {
 }
 
 section.hestia-about {
-    /* background-image: url(./assets/images/acreditamos.jpg); */
     height: 400px;
     background-position: center center;
     background-size: contain;
+}
+
+section#contact {
+    background-image: url('./assets/images/ponte-jk.jpg') !important;
 }
 
 section.hestia-about.section-image:after {
@@ -388,6 +395,7 @@ section.hestia-register h4.card-title {
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
+    margin: 0;
 }
 
 section.hestia-register p.preco {
@@ -397,6 +405,19 @@ section.hestia-register p.preco {
     font-weight: bold;
     line-height: 32px;
     border-radius: 5px;
+    margin-bottom: 0;
+}
+
+section.hestia-register p.preco .parcelado {
+    font-size: 18px;
+}
+
+section.hestia-register .content {
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0;
 }
 
 section.hestia-register p.card-description {
