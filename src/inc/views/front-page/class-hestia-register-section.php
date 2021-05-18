@@ -70,7 +70,7 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                                             <p class="preco">de <span class="riscado">R$ 69,90</span><br /> por R$ 49,90*</p>
                                             <div class="buttons text-center">
                                                 <a href="/?p=69&plano=mensal" title="Quero!" class="btn btn-primary">
-                                                    Quero! Só R$ 19,90/Mês*
+                                                    Quero! Só R$ 49,90/Mês*
                                                 </a>
                                             </div>
                                         </div>
