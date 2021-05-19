@@ -14,8 +14,8 @@
  * @modified 1.1.30
  */
 
-//  $source = 'http://sistema.cartaoamigo.com.br/formulario-associado'; // Produção
- $source = 'http://sistema-dev.cartaoamigo.com.br/formulario-associado'; // Desenvolvimento
+ $source = 'http://sistema.cartaoamigo.com.br/formulario-associado'; // Produção
+//  $source = 'http://sistema-dev.cartaoamigo.com.br/formulario-associado'; // Desenvolvimento
 
  if (isset($_GET['plano'])) {
 	$source .= '?plano=' . $_GET['plano'];
