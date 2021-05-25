@@ -103,6 +103,46 @@ class Hestia_Partners_Section extends Hestia_Abstract_Main
                                     src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-igdf.png' ?>"
                                     alt="Laboratório Asperge" />
                             </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-medcei.png' ?>"
+                                    alt="Med Cei" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-lapac.png' ?>"
+                                    alt="Lapac Laboratório" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-iso.png' ?>"
+                                    alt="Iso Cardiologia e Exames" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-foco.png' ?>"
+                                    alt="Foco Oftalmologia" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-saude-catedral.png' ?>"
+                                    alt="Saúde Catedral" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-peres.png' ?>"
+                                    alt="Peres" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-ibe.png' ?>"
+                                    alt="IBE Imagem e Diagnóstico" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-centrus.png' ?>"
+                                    alt="Centrus Diagnóstico por imagem" />
+                            </div>
                         </div>
                     </div>
                 </div>
