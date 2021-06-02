@@ -143,6 +143,16 @@ class Hestia_Partners_Section extends Hestia_Abstract_Main
                                     src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-centrus.png' ?>"
                                     alt="Centrus Diagnóstico por imagem" />
                             </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-saude-agora.png' ?>"
+                                    alt="Centro Clínico Saúde Agora" />
+                            </div>
+                            <div class="partner">
+                                <img
+                                    src="<?php echo get_template_directory_uri() . '-child/assets/images/rc-naso.png' ?>"
+                                    alt="Núcleo Asa Sul de Otorrino" />
+                            </div>
                         </div>
                     </div>
                 </div>

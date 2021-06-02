@@ -81,7 +81,8 @@ class Hestia_Register_Section extends Hestia_Abstract_Main
                     </div>
                     <div class="row" style="margin-bottom: 16px;">
                         <div class="col-md-12 text-center">
-                            *permite até 4 dependentes inteiramente grátis.
+                            *permite até 4 dependentes inteiramente grátis.<br />
+                            *na opção de assinatura mensal, será fornecido apenas o cartão virtual.
                         </div>
                     </div>
                     <div class="buttons text-center">
