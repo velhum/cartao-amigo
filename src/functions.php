@@ -1,6 +1,15 @@
 <?php
 
-require get_template_directory() . '-child/inc/customizer.php';
+/**
+ * Incluindo arquivos do TGM (Gerenciador de plugins obrigatórios)
+ */
+require_once get_stylesheet_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_stylesheet_directory() . '/inc/required-plugins.php';
+
+/**
+ * Incluindo arquivos do theme custumizer
+ */
+require get_stylesheet_directory() . '/inc/customizer.php';
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -67,7 +76,7 @@ function my_custom_scripts() {
 
 		wp_enqueue_script(
 			'_themename-scripts',
-			get_template_directory_uri() . '-child/assets/js/bundle.js',
+			get_stylesheet_directory_uri() . '/assets/js/bundle.js',
 			array(),
 			'_themeversion',
 			true );
