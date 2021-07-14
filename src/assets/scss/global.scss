@@ -32,6 +32,10 @@
     background-image: url('./assets/images/hand-holding-card.jpg') !important;
 }
 
+body.page-template-default.page div.header-filter {
+    background-image: none !important;
+}
+
 body:not(.home) .header-filter {
     background-position: center -73px;
 }

@@ -74,7 +74,7 @@ export const styles = () => {
 }
 
 /*
-** Trata os scripts
+** Trata os scripts da página inicial
 */
 
 export const scripts = () => {
@@ -97,6 +97,38 @@ export const scripts = () => {
     devtool: !PRODUCTION ? 'inline-source-map' : false,
     output: {
       filename: 'bundle.js'
+    },
+    externals: {
+      jquery: 'jQuery'
+    },
+  }))
+  .pipe(dest(`../wp-content/themes/${info.theme_directory}/assets/js`));
+}
+
+/*
+** Trata os script da página rede-credenciada
+*/
+
+export const scriptRedeCredenciada = () => {
+  return src('src/assets/js/rede-credenciada.js')
+  .pipe(webpack({
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: []
+            }
+          }
+        }
+      ]
+    },
+    mode: PRODUCTION ? 'production' : 'development',
+    devtool: !PRODUCTION ? 'inline-source-map' : false,
+    output: {
+      filename: 'rede-credenciada.js'
     },
     externals: {
       jquery: 'jQuery'
@@ -210,7 +242,7 @@ export const watchForChanges = () => {
   watch('src/assets/scss/**/*.scss', styles);
   watch('src/assets/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, copyGif, reload));
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
-  watch('src/assets/js/**/*.js', series(scripts, reload));
+  watch('src/assets/js/**/*.js', series(scripts, scriptRedeCredenciada, reload));
   watch("**/*.php", reload);
 }
 
@@ -222,9 +254,11 @@ export const dev = series(
                         , copy
                         , copyJquery
                         , copyGif
-                        , scripts)
-                        , serve
-                        , watchForChanges
+                        , scripts
+                        , scriptRedeCredenciada
+                      )
+                      , serve
+                      , watchForChanges
                     );
 
 export const build = series(
@@ -235,7 +269,9 @@ export const build = series(
                           , copy
                           , copyJquery
                           , copyGif
-                          , scripts)
+                          , scripts
+                          , scriptRedeCredenciada
+                        )
                       , concatCssHeader
                       , compress);
 export default dev;

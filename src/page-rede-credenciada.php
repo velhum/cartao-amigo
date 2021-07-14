@@ -18,7 +18,14 @@ do_action( 'hestia_before_single_page_wrapper' );
 					get_template_part( 'template-parts/content', 'none' );
 			endif;
 				?>
-            <code>Fazer integração com a API (formulário de pesquisa)!!!!!</code>
+			<div class="col-md-8 page-content-wrap  col-md-offset-2">
+				<div class="row">
+					<div class="col-md-12">
+					<a href="#" id="get-data">Get JSON data</a>
+    				<div id="show-data"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	

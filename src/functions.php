@@ -86,3 +86,24 @@ function my_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
+/**
+ * Insere script da página rede-credenciada
+ *
+ * @since 1.1.0
+ */
+function rede_credenciada_scripts() {
+
+	if( is_page('rede-credenciada') ){
+
+		wp_enqueue_script(
+			'_themename-rede-credenciada',
+			get_stylesheet_directory_uri() . '/assets/js/rede-credenciada.js',
+			array(),
+			'_themeversion',
+			true );
+	  
+	}
+	
+}
+add_action( 'wp_enqueue_scripts', 'rede_credenciada_scripts' );
+
