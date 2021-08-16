@@ -1,30 +1,67 @@
 (function($){
 
-    console.log('rede-credenciada');
+    const api = {
+        path: 'https://sistema.cartaoamigo.com.br/api/',
+        especialidade: 'tipoespecialidades/combo',
+        uf: 'endereco/estados',
+        cidade: 'endereco/bairros/'
+    };
 
-    $('#get-data').click(function () {
-        const showData = $('#show-data');
-    
+    getEspecialidades();
+    getUFs();
+
+    /**
+     * Recupera lista de especialidades
+     */
+    function getEspecialidades() {
+        let listaDeEspecialidades = '';
         $.getJSON(
-            'https://servicodados.ibge.gov.br/api/v1/localidades/estados/33/distritos',
+            api.path + api.especialidade,
+            data => {
+                data.forEach(elm => {
+                    listaDeEspecialidades += `<option value="${elm.id}">${elm.nome}</option>`;
+                });
+                $('#lista-de-especialidades').append(listaDeEspecialidades);
+            }
+        )
+    }
+    
+    /**
+     * Recupera lista de UFs
+     */
+    function getUFs() {
+        let listaDeUFs = '';
+        $.getJSON(
+            api.path + api.uf,
+            data => {
+                data.forEach(elm => {
+                    listaDeUFs += `<option value="${elm}">${elm}</option>`;
+                });
+                $('#lista-de-ufs').append(listaDeUFs);
+            }
+        )
+    }
+    
+    /**
+     * Recupera lista de Cidades
+     */
+    function getCidades(uf) {
+        let listaDeCidades = '';
+        $.getJSON(
+            api.path + api.cidade + uf,
             data => {
                 console.log(data);
-            
-                let items = data.map(item => {
-                    return item.nome + ': ' + item.municipio.microrregiao.nome;
+                data.forEach(elm => {
+                    listaDeCidades += `<option value="${elm.id}">${elm.descricao}</option>`;
                 });
-            
-                showData.empty();
-            
-                if (items.length) {
-                    let content = '<li>' + items.join('</li><li>') + '</li>';
-                    let list = $('<ul />').html(content);
-                    showData.append(list);
-                };
+                $('#lista-de-cidades').append(listaDeCidades);
             }
-        );
+        )
+    }
+
+    $('#lista-de-ufs').on('change', () => {
+        getCidades($('#lista-de-ufs').val());
+    })
     
-        showData.text('Loading the JSON file.');
-    });
 
 })(jQuery)

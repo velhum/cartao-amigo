@@ -33,6 +33,7 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.14",
+    "connect-modrewrite": "^0.10.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",

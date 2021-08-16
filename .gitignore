@@ -2,7 +2,7 @@
 node_modules/
 hestia-child/
 bundled/
-
+wp-content/
 # ignore log files and databases
 *.log
 *.sql
